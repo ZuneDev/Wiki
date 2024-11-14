@@ -10,7 +10,7 @@ Being a binary data format, UIB is capable of storing several primitive data typ
 All offsets are stored as unsigned 32-bit integers (`UInt32`), relative to the start of the file unless otherwise specified.
 
 ### Strings
-Strings are length-prefixed, with their 16-bit buffer size followed by the character bytes. Null strings are encoded with a length of `0xFFFF`, but with a true length of zero. Additional logic is performed with the highest bit, but its purpose is unknown.
+Strings are length-prefixed, with their 16-bit buffer size followed by the character bytes. Null strings are encoded with a length of `0xFFFF`. Additional logic is performed with the highest bit, but its purpose is unknown.
 
 ### Integer arrays
 Arrays of 32-bit integers are also stored prefixed with their length, where, similarly to strings, a 'negative length' is interpreted as a null array. Otherwise, each integer is stored one after the other. Both signed and unsigned integers (`UInt32` and `Int32`) can be stored with in this format, but the Iris library always reads the values as unsigned, requiring callers to unchecked cast the value to `Int32` for signed integers.
@@ -39,6 +39,8 @@ The last item stored in the Table of Contents is a reference to the Binary Data 
 ### Line Number Table
 
 ### Object Section
+
+### Export Table
 
 ## TODO
 - list the tables

@@ -27,8 +27,14 @@ The Table of Contents begins at offset `0x0008`, with two offsets specifying the
 The last item stored in the Table of Contents is a reference to the Binary Data Table. This is composed of two fields, of which only one can be set at at time. The value at offset `0x0018` is the start of a string. If the string is not null, then it is used as the resource URI to load a shared Data Table from. If it is null, then the `UInt32` at location `0x001A` is the offset to the Data Table embedded within the current file.
 
 ### Binary Data Table
+The Binary Data Table consists of several subtables, with each one containing a different types of constant data. These subtables are stored in the following order:
+1. Strings
+1. ???
 
 #### Strings
+*[Work in progress]*
+
+The Strings table is effectively a list of strings, though unlike the [primitive `string[]`](./compiled-uix.md#string-arrays), it is actually stored as `char[][]`. The first four bytes of the Strings table contain the length of the list as a 32-bit integer. Although this value cannot be negative, `UIX.dll` ultimately uses this as an `Int32` to allocate memory, so theoretically a maximum of `0x7FFFFFFF` or 2,147,483,647 strings.
 
 #### Constants Table
 
@@ -41,6 +47,18 @@ The last item stored in the Table of Contents is a reference to the Binary Data 
 ### Object Section
 
 ### Export Table
+
+## Load passes
+*[Work in progress]*
+
+Compiled UIX is loaded in N main passes, listed in order of execution below. "Depersist" usually refers to reading and processing encoded information, such as type exports.
+1. Declare types
+    1. Depersist [Table of Contents](./compiled-uix.md#table-of-contents)
+    1. Depersist [Binary Data Table](./compiled-uix.md#binary-data-table)
+    1. Depersist dependencies
+    1. Depersist type exports
+1. Populate public model
+1. Full
 
 ## TODO
 - list the tables

@@ -16,7 +16,13 @@ All offsets are stored as unsigned 32-bit integers (`UInt32`), relative to the s
 Offset ranges are typically specified with an inclusive start offset and exclusive end offset: $[\mathrm{Start}, \mathrm{End})$.
 
 ### Strings
-Strings are length-prefixed, with their 16-bit buffer size followed by the character bytes. Null strings are encoded with a length of `0xFFFF`. Additional logic is performed with the highest bit, but its purpose is unknown.
+Strings are stored with a `UInt16` length, followed by encoded characters. Some 'length' values are used to encode special string values:
+
+Length value (binary) | Meaning
+--------------------- | --------
+`1111 1111 1111 1111` | Null string
+`1xxx xxxx xxxx xxxx` | UTF-8 character encoding
+`0xxx xxxx xxxx xxxx` | UTF-16 character encoding
 
 ### Integer arrays
 Arrays of 32-bit integers are also stored prefixed with their length, where, similarly to strings, a 'negative length' is interpreted as a null array. Otherwise, each integer is stored one after the other. Both signed and unsigned integers (`UInt32` and `Int32`) can be stored with in this format, but the Iris library always reads the values as unsigned, requiring callers to unchecked cast the value to `Int32` for signed integers.
@@ -38,8 +44,6 @@ The Binary Data Table consists of several subtables, with each one containing a 
 1. ???
 
 #### Strings
-*[Work in progress]*
-
 The Strings table is effectively a list of strings, though unlike the [primitive `string[]`](./compiled-uix.md#string-arrays), it is actually stored as `char[][]`. The first four bytes of the Strings table contain the length of the list as a 32-bit integer. Although this value cannot be negative, `UIX.dll` ultimately uses this as an `Int32` to allocate memory, so theoretically a maximum of `0x7FFFFFFF` or 2,147,483,647 strings.
 
 #### Constants Table

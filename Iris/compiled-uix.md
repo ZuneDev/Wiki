@@ -8,8 +8,12 @@ Nearly all of the markup-related code is in the [`Microsoft.Iris.Markup`](https:
 ## Data format
 Being a binary data format, UIB is capable of storing several primitive data types.
 
+All integers are stored in little endian, as is standard for Windows.
+
 ### Offsets
 All offsets are stored as unsigned 32-bit integers (`UInt32`), relative to the start of the file unless otherwise specified.
+
+Offset ranges are typically specified with an inclusive start offset and exclusive end offset: $[\mathrm{Start}, \mathrm{End})$.
 
 ### Strings
 Strings are length-prefixed, with their 16-bit buffer size followed by the character bytes. Null strings are encoded with a length of `0xFFFF`. Additional logic is performed with the highest bit, but its purpose is unknown.

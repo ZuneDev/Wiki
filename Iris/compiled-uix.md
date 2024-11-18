@@ -31,7 +31,10 @@ Arrays of 32-bit integers are also stored prefixed with their length, where, sim
 String arrays are effectively `Int32` arrays, where each item is an index into the string portion of the Binary Data Table.
 
 ## File structure
-A custom binary format is used to store all compiler output. The first four bytes are always `0x5549421A`, which spell out `"UIB␚"` in ASCII. The next four bytes contain some representation of the UIB version, although the exact format is unknown. All known Iris 4 releases, including 4.0 and the 4.8 Beta, use `1012` (`0x3F4`).
+A custom binary format is used to store all compiler output. This format is dividing into several sections, and in the case of [shared Data Tables](./compiled-uix.md#shared-data-tables), can be split over multiple files.
+
+### Header
+The first four bytes are always `0x5549421A`, which spell out `"UIB␚"` in ASCII. The next four bytes contain some representation of the UIB version, although the exact format is unknown. All known Iris 4 releases, including 4.0 and the 4.8 Beta, use `1012` (`0x3F4`).
 
 ### Table of Contents
 The Table of Contents begins at offset `0x0008`, with two offsets specifying the start and end of the object section. Locations `0x0010` and `0x0014` contain the start and end of the Line Number Table, respectively.

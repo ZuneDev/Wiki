@@ -50,18 +50,18 @@ The first four bytes of the Strings table contain the length of the list as a 32
 
 Following the string count is a series of offsets relative to the first entry in the offset table (the byte immediately after the string count bytes). This is used sort of like a jump table, where the first chunk of the table is an array of fixed-size offsets into the second chunk. When the bytecode reader is reading from fixed memory, this allows it to jump directly to the requested string using its index without having to read the entire table or every string before it. As an example, a string table with three entries might be stored as shown below. Note that all offsets are relative to first entry in the jump table.
 
-Offset           | Value        | Meaning
----------------- | ------------ | -----------------------------------------
-`-0x04`          | `0x03000000` | The table contains 3 strings
-`0x00`           | `0x0C000000` | `strings[0]` is located at offset `0x0C`
-`0x04`           | `0x1D000000` | `strings[1]` is located at offset `0x1D`
-`0x08`           | `0x23000000` | `strings[2]` is located at offset `0x23`
-`0x0C`           | `0x08000000` | `strings[0]` is 8 UTF-16 characters
-`0x0D` to `0x1D` | `"Γεια σας"` | `strings[0]` character data
-`0x1D`           | `0x05800000` | `strings[1]` is 5 UTF-8 characters
-`0x1E` to `0x23` | `"Howdy"`    | `strings[1]` character data
-`0x23`           | `0x08800000` | `strings[2]` is 8 UTF-8 characters
-`0x24` to `0x2C` | `"MOREtext"` | `strings[2]` character data
+Start offset   | Value        | Meaning
+-------------- | ------------ | -----------------------------------------
+`-0x04`        | `0x03000000` | The table contains 3 strings
+`0x00`         | `0x0C000000` | `strings[0]` is located at offset `0x0C`
+`0x04`         | `0x1D000000` | `strings[1]` is located at offset `0x1D`
+`0x08`         | `0x23000000` | `strings[2]` is located at offset `0x23`
+`0x0C`         | `0x08000000` | `strings[0]` is 8 UTF-16 characters
+`0x0D`         | `"Γεια σας"` | `strings[0]` character data
+`0x1D`         | `0x05800000` | `strings[1]` is 5 UTF-8 characters
+`0x1E`         | `"Howdy"`    | `strings[1]` character data
+`0x23`         | `0x08800000` | `strings[2]` is 8 UTF-8 characters
+`0x24`         | `"MOREtext"` | `strings[2]` character data
 
 #### Constants Table
 

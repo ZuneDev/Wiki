@@ -16,7 +16,7 @@ All offsets are stored as unsigned 32-bit integers (`UInt32`), relative to the s
 Offset ranges are typically specified with an inclusive start offset and exclusive end offset: $[\mathrm{Start}, \mathrm{End})$.
 
 ### Strings
-Strings are stored with a `UInt16` length, followed by encoded characters. Some 'length' values are used to encode special string values:
+Strings are stored length-prefixed with a `UInt16` preamble, followed by encoded characters. The preamble is `0xFFFF` for null strings. For non-null strings, the most significant bit is set when the characters are encoded in UTF-8, and the remaining 15 bits are the number of characters (not bytes) in the string.
 
 Length value (binary) | Meaning
 --------------------- | --------

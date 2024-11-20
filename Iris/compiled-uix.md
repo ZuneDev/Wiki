@@ -30,6 +30,9 @@ Arrays of 32-bit integers are also stored prefixed with their length, where, sim
 ### String arrays
 String arrays are effectively `Int32` arrays, where each item is an index into the string portion of the Binary Data Table.
 
+### Booleans
+Boolean values are stored using a single byte, where `0` represents `false` and `1` represents `true`.
+
 ## File structure
 A custom binary format is used to store all compiler output. This format is dividing into several sections, and in the case of [shared Data Tables](./compiled-uix.md#shared-data-tables), can be split over multiple files.
 
@@ -41,6 +44,19 @@ The Table of Contents begins at offset `0x0008`, with two offsets specifying the
 
 The last item stored in the Table of Contents is a reference to the Binary Data Table. This is composed of two fields, of which only one can be set at at time. The value at offset `0x0018` is the start of a string. If the string is not null, then it is used as the resource URI to load a shared Data Table from. If it is null, then the `UInt32` at location `0x001A` is the offset to the Data Table embedded within the current file.
 
+### Dependencies
+The Dependencies section is a list of UIX files to include, encoded as the unsigned 16-bit count followed by a series of entries. Each include is composed of a flag that stores whether the referenced file is UIX XML, and the reference's compiler name [string](./compiled-uix.md#strings). This name is almost always the URI the file was loaded from.
+
+As an example, a Dependencies section with two includes might be stored as shown below. Note that all offsets are relative to the first byte of the length.
+
+Start offset          | Value         | Meaning
+--------------------- | ------------- | ---------
+`0x00`                | `0x02000000`  | The list contains 2 includes
+`0x04`                | `0x00`        | `dependencies[0]` is compiled UIB
+`0x05`                | `"res://UIXControls/Button.uib"` | `dependencies[0]` is at the specified URI
+`0x25`                | `0x01`        | `dependencies[1]` is UIX XML
+`0x26`                | `"file://D:/Iris/example.uix"` | `dependencies[1]` is at the specified URI
+
 ### Binary Data Table
 The Binary Data Table consists of several subtables, with each one containing a different types of constant data. These subtables are stored in the following order:
 1. Strings
@@ -51,7 +67,9 @@ The Strings table is effectively a list of strings, though unlike the [primitive
 
 The first four bytes of the Strings table contain the length of the list as a 32-bit integer. Although this value cannot be negative, `UIX.dll` ultimately uses this as an `Int32` to allocate memory, so theoretically a maximum of `0x7FFFFFFF` or 2,147,483,647 strings can be stored in a single UIB file.
 
-Following the string count is a series of offsets relative to the first entry in the offset table (the byte immediately after the string count bytes). This is used sort of like a jump table, where the first chunk of the table is an array of fixed-size offsets into the second chunk. When the bytecode reader is reading from fixed memory, this allows it to jump directly to the requested string using its index without having to read the entire table or every string before it. As an example, a string table with three entries might be stored as shown below. Note that all offsets are relative to first entry in the jump table.
+Following the string count is a series of offsets relative to the first entry in the offset table (the byte immediately after the string count bytes). This is used sort of like a jump table, where the first chunk of the table is an array of fixed-size offsets into the second chunk. When the bytecode reader is reading from fixed memory, this allows it to jump directly to the requested string using its index without having to read the entire table or every string before it.
+
+As an example, a string table with three entries might be stored as shown below. Note that all offsets are relative to first entry in the jump table.
 
 Start offset   | Value        | Meaning
 -------------- | ------------ | -----------------------------------------

@@ -24,17 +24,35 @@ Length value (binary) | Meaning
 `1xxx xxxx xxxx xxxx` | UTF-8 character encoding
 `0xxx xxxx xxxx xxxx` | UTF-16 character encoding
 
+### String references
+Most strings are not stored directly within the table that uses it, but instead to the [Binary Data Table](#binary-data-table). This allows for common strings to be deduplicated, which can reduce file size.
+
+These string references are stored as an `Int32` index into the [Strings section](#strings-1).
+
 ### Integer arrays
 Arrays of 32-bit integers are also stored prefixed with their length, where, similarly to strings, a 'negative length' is interpreted as a null array. Otherwise, each integer is stored one after the other. Both signed and unsigned integers (`UInt32` and `Int32`) can be stored with in this format, but the Iris library always reads the values as unsigned, requiring callers to unchecked cast the value to `Int32` for signed integers.
 
 ### String arrays
-String arrays are effectively `Int32` arrays, where each item is an index into the string portion of the Binary Data Table.
+String arrays are effectively `Int32` arrays, where each item is an index into the string portion of the Binary Data Table. See [string references](#string-references) for more details.
 
 ### Booleans
-Boolean values are stored using a single byte, where `0` represents `false` and `1` represents `true`.
+Boolean values are stored as a single byte, where `0` represents `false` and `1` represents `true`.
+
+### Enums
+Enums are usually stored as 32-bit integers. Naturally, the meaning of stored integer value depends on the enum itself.
+
+#### `MarkupType`
+Name        | Value
+----------- | -------
+`None`      | `0x00000000`
+`UI`        | `0x01000000`
+`Class`     | `0x02000000`
+`Effect`    | `0x03000000`
+`DataType`  | `0x04000000`
+`DataQuery` | `0x05000000`
 
 ## File structure
-A custom binary format is used to store all compiler output. This format is dividing into several sections, and in the case of [shared Data Tables](./compiled-uix.md#shared-data-tables), can be split over multiple files.
+A custom binary format is used to store all compiler output. This format is dividing into several sections, and in the case of [shared Data Tables](#shared-data-tables), can be split over multiple files.
 
 ### Header
 The first four bytes are always `0x5549421A`, which spell out `"UIB␚"` in ASCII. The next four bytes contain some representation of the UIB version, although the exact format is unknown. All known Iris 4 releases, including 4.0 and the 4.8 Beta, use `1012` (`0x3F4`).
@@ -42,20 +60,23 @@ The first four bytes are always `0x5549421A`, which spell out `"UIB␚"` in ASCI
 ### Table of Contents
 The Table of Contents begins at offset `0x0008`, with two offsets specifying the start and end of the object section. Locations `0x0010` and `0x0014` contain the start and end of the Line Number Table, respectively.
 
-The last item stored in the Table of Contents is a reference to the Binary Data Table. This is composed of two fields, of which only one can be set at at time. The value at offset `0x0018` is the start of a string. If the string is not null, then it is used as the resource URI to load a shared Data Table from. If it is null, then the `UInt32` at location `0x001A` is the offset to the Data Table embedded within the current file.
+The last item stored in the Table of Contents is a reference to the Binary Data Table. This is composed of two fields, of which only one can be set at at time. The value at offset `0x0018` is the start of a [string](#strings). If the string is not null, then it is used as the resource URI to load a shared Data Table from. If it is null, then the `UInt32` at location `0x001A` is the offset to the Data Table embedded within the current file.
 
 ### Dependencies
-The Dependencies section is a list of UIX files to include, encoded as the unsigned 16-bit count followed by a series of entries. Each include is composed of a flag that stores whether the referenced file is UIX XML, and the reference's compiler name [string](./compiled-uix.md#strings). This name is almost always the URI the file was loaded from.
+The Dependencies section is a list of UIX files to include, encoded as the unsigned 16-bit count followed by a series of entries. Each include is composed of a flag that stores whether the referenced file is UIX XML, and the reference's compiler name [string](#string-references). This name is almost always the URI the file was loaded from.
 
 As an example, a Dependencies section with two includes might be stored as shown below. Note that all offsets are relative to the first byte of the length.
 
 Start offset          | Value         | Meaning
 --------------------- | ------------- | ---------
 `0x00`                | `0x02000000`  | The list contains 2 includes
-`0x04`                | `0x00`        | `dependencies[0]` is compiled UIB
-`0x05`                | `"res://UIXControls/Button.uib"` | `dependencies[0]` is at the specified URI
-`0x25`                | `0x01`        | `dependencies[1]` is UIX XML
-`0x26`                | `"file://D:/Iris/example.uix"` | `dependencies[1]` is at the specified URI
+`0x04`                | `0x00000000`  | `dependencies[0]` is compiled UIB
+`0x05`                | `0x05000000`  | The URI of the 1st dependency is the 6th string in the [Data Table](#binary-data-table)
+`0x09`                | `0x01`        | `dependencies[1]` is UIX XML
+`0x10`                | `0x02000000` | The URI of the 2nd dependency is the 3rd string in the [Data Table](#binary-data-table)
+
+### Type Export Declarations
+The Type Export Declarations are composed to two tables: the Export Table and Alias Table. The Export Table is a length-prefixed (`UInt16`) list of exports, where each export is defined using a [string reference](#strings) and 
 
 ### Binary Data Table
 The Binary Data Table consists of several subtables, with each one containing a different types of constant data. These subtables are stored in the following order:
@@ -63,7 +84,7 @@ The Binary Data Table consists of several subtables, with each one containing a 
 1. ???
 
 #### Strings
-The Strings table is effectively a list of strings, though unlike the [primitive `string[]`](./compiled-uix.md#string-arrays), it is actually stored as `char[][]`.
+The Strings table is effectively a list of strings, though unlike the [primitive `string[]`](#string-arrays), it is actually stored as `char[][]`.
 
 The first four bytes of the Strings table contain the length of the list as a 32-bit integer. Although this value cannot be negative, `UIX.dll` ultimately uses this as an `Int32` to allocate memory, so theoretically a maximum of `0x7FFFFFFF` or 2,147,483,647 strings can be stored in a single UIB file.
 
@@ -101,8 +122,8 @@ Start offset   | Value        | Meaning
 
 Compiled UIX is loaded in N main passes, listed in order of execution below. "Depersist" usually refers to reading and processing encoded information, such as type exports.
 1. Declare types
-    1. Depersist [Table of Contents](./compiled-uix.md#table-of-contents)
-    1. Depersist [Binary Data Table](./compiled-uix.md#binary-data-table)
+    1. Depersist [Table of Contents](#table-of-contents)
+    1. Depersist [Binary Data Table](#binary-data-table)
     1. Depersist dependencies
     1. Depersist type exports
 1. Populate public model

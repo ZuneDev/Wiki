@@ -50,7 +50,7 @@ Name        | Value
 `DataQuery` | `0x05000000`
 
 ## File structure
-A custom binary format is used to store all compiler output. This format is dividing into several sections, and in the case of [shared Data Tables](#shared-data-tables), can be split over multiple files.
+A custom binary format is used to store all compiler output. This format is divided into several sections, and can even be split across multiple files using [shared Data Tables](#shared-data-tables).
 
 ### Header
 The first four bytes are always `0x5549421A`, which spell out `"UIB␚"` in ASCII. The next four bytes contain some representation of the UIB version, although the exact format is unknown. All known Iris 4 releases, including 4.0 and 4.8 Beta, use `1012` (`0x3F4`).

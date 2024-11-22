@@ -1,5 +1,8 @@
 # Microsoft Iris
 
+## Subtopics
+- [Compiled UIX v4](./compiled-uix.md)
+
 ## What is Microsoft Iris?
 Microsoft Iris (sometimes called UIX) was a private UI framework for Windows. It was developed for internal use by various Microsoft Windows software, although only the Zune desktop software is known to use it.
 
@@ -19,13 +22,14 @@ However, this check can be patched out with relative ease, though it should be d
 
 ## History
 ### 2.x
-Microsoft Iris first appeared in the release of version 2.0 of the Zune desktop software. No pre-built controls were included at all, with even primitives like buttons requiring consumer to build from scratch. Compiled UIX also did not exist at this time. Instead, Iris would parse and interpret UIX XML at runtime. UIX XML syntax closely resembled [US-20090327876-A1](../public/US-20090327876-A1.pdf), a patent filed by Microsoft at the end of 2009, and [Media Center Markup Language (MCML)](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/windows-media-center-sdk/bb189388(v=msdn.10)) as used by [Windows Media Center](https://en.wikipedia.org/wiki/Windows_Media_Center).
+Microsoft Iris first appeared in the release of version 2.0 of the Zune desktop software. No pre-built controls were included at all, with even primitives like buttons requiring consumer to build from scratch. Compiled UIX also did not exist at this time. Instead, Iris would parse and interpret UIX XML at runtime. UIX XML syntax closely resembled [US-20090327876-A1](./US-20090327876-A1.pdf), a patent filed by Microsoft at the end of 2009, and [Media Center Markup Language (MCML)](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/windows-media-center-sdk/bb189388(v=msdn.10)) as used by [Windows Media Center](https://en.wikipedia.org/wiki/Windows_Media_Center).
 
 ### 3.x
 Iris 3.0 released with Zune 3.0 in late 2008. It was the most significant update to Iris as it introduced the UIX compiler. Rather than parsing XML at runtime, Iris could compile UIX files at buildtime into a proprietary format that resembled custom bytecode. The shipped version of `UIX.dll` includes the original UIX XML interpreter and the binary UIX compiler, although neither are used by the Zune software at runtime. [UIXC](https://github.com/ZuneDev/ZuneUIXTools/tree/master/UIXC) is an open-source command line program wrapping the UIX compiler.
 
 ### 4.x
 Iris 4.0 was a minor update released with Zune 4.0 in 2009. By this time, UIX XML differed sightly from the source included in Zune 2.0. For example:
+
 - Assignments and expressions in bracketless conditionals are no longer wrapped in square brackets. 
     - `HyperlinkRepeater.Source = [Text.Fragments];` to `HyperlinkRepeater.Source = Text.Fragments;`
     - `if ([FragmentMouseFocus.Value])` to `if (FragmentMouseFocus.Value)`

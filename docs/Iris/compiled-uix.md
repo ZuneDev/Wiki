@@ -25,13 +25,13 @@ Length value (binary) | Meaning
 `0xxx xxxx xxxx xxxx` | UTF-16 character encoding
 
 ### String references
-Most strings are not stored inline, but instead as `Int32` indexes into the [Strings section](#strings-1) of the [Binary Data Table](#binary-data-table). This allows for common strings to be deduplicated, which can reduce file size.
-
-### Integer arrays
-Arrays of 32-bit integers are also stored prefixed with their length, where, similarly to strings, a 'negative length' is interpreted as a null array. Otherwise, each integer is stored one after the other. Both signed and unsigned integers (`UInt32` and `Int32`) can be stored with in this format, but the Iris library always reads the values as unsigned, requiring callers to unchecked cast the value to `Int32` for signed integers.
+Most strings are not stored inline, but instead as `Int32` indexes into the [Strings section](#strings-table) of the [Binary Data Table](#binary-data-table). This allows for common strings to be deduplicated, which can reduce file size.
 
 ### String arrays
 String arrays are lists of [string references](#string-references). This means that they are effectively `Int32` arrays, where each item is an index into the string portion of the Binary Data Table.
+
+### Integer arrays
+Arrays of 32-bit integers are also stored prefixed with their length, where, similarly to strings, a 'negative length' is interpreted as a null array. Otherwise, each integer is stored one after the other. Both signed and unsigned integers (`UInt32` and `Int32`) can be stored with in this format, but the Iris library always reads the values as unsigned, requiring callers to unchecked cast the value to `Int32` for signed integers.
 
 ### Booleans
 Boolean values are stored as a single byte, where `0` represents `false` and `1` represents `true`.
@@ -90,7 +90,7 @@ The Binary Data Table consists of several subtables, with each one containing a 
 1. Strings
 1. ???
 
-#### Strings
+#### Strings table
 The Strings table is effectively a list of strings, though unlike the [primitive `string[]`](#string-arrays), it is actually stored as `char[][]`.
 
 The first four bytes of the Strings table contain the length of the list as a 32-bit integer. Although this value cannot be negative, `UIX.dll` ultimately uses this as an `Int32` to allocate memory, so theoretically a maximum of `0x7FFFFFFF` or 2,147,483,647 strings can be stored in a single UIB file.
@@ -128,6 +128,7 @@ Start offset   | Value        | Meaning
 *[Work in progress]*
 
 Compiled UIX is loaded in N main passes, listed in order of execution below. "Depersist" usually refers to reading and processing encoded information, such as type exports.
+
 1. Declare types
     1. Depersist [Table of Contents](#table-of-contents)
     1. Depersist [Binary Data Table](#binary-data-table)

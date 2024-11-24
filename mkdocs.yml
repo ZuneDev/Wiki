@@ -1,2 +1,4 @@
 site_name: ZuneDev Wiki
 site_url: http://zunedev.github.io
+extra_css:
+  - style.css

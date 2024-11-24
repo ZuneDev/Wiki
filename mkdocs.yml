@@ -7,6 +7,14 @@ extra_css:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - nl2br
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - callouts
 
 extra_javascript:
   - javascripts/mathjax.js

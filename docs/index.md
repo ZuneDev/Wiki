@@ -5,4 +5,5 @@ Howdy, Argonauts! This site contains documentation about all things related to Z
 > These docs are a work in progress.
 
 ## Topics
-- [Microsoft Iris](./Iris/index.md)
+- [Zune software](./Zune%20software/index.md)
+    - [Microsoft Iris](./Zune%20software/Iris/index.md)

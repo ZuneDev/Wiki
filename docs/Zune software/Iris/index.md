@@ -1,8 +1,7 @@
 # Microsoft Iris
 
-## Subtopics
-- [Compiled UIX v4](./compiled-uix.md)
-- [Compiled UIX v3](./compiled-uix-3.md)
+## Topics
+{{ pagetree(subtree) }}
 
 ## What is Microsoft Iris?
 Microsoft Iris (sometimes called UIX) is a private UI framework for Windows. It was developed for internal use by various Microsoft Windows software, although only the Zune desktop software is known to use it.

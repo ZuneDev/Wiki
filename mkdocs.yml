@@ -1,5 +1,7 @@
 site_name: ZuneDev Wiki
 site_url: http://zunedev.github.io
+repo_url: https://github.com/ZuneDev/Wiki/
+edit_uri: blob/main/docs
 
 extra_css:
   - style.css

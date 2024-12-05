@@ -77,6 +77,34 @@ hr {
     border-top: 1px solid #EEE;
 }
 
+.pagetree-functions {
+    display: none;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #2fa4e7;
+    /* --bs-btn-border-color: rgba(255, 255, 255, 128); */
+    --bs-btn-border-color: unset;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #288bc4;
+    --bs-btn-hover-border-color: rgba(255, 255, 255, 179);
+    --bs-btn-focus-shadow-rgb: 78,178,235;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #2683b9;
+    --bs-btn-active-border-color: rgba(255, 255, 255, 102);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #2fa4e7;
+    --bs-btn-disabled-border-color: rgba(255, 255, 255, 0);
+
+    --bs-btn-border-radius: 0.3vmax;
+    --bs-btn-border-width: 2px;
+
+    background-image: linear-gradient(#EC008C, #BE0071);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 footer {
     color: #999;
 }

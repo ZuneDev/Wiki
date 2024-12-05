@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>http://zunedev.github.io/</loc>
+         <lastmod>2024-12-05</lastmod>
+    </url>
+    <url>
+         <loc>http://zunedev.github.io/Zune%20software/</loc>
+         <lastmod>2024-12-05</lastmod>
+    </url>
+    <url>
+         <loc>http://zunedev.github.io/Zune%20software/Iris/</loc>
+         <lastmod>2024-12-05</lastmod>
+    </url>
+    <url>
+         <loc>http://zunedev.github.io/Zune%20software/Iris/compiled-uix/</loc>
+         <lastmod>2024-12-05</lastmod>
+    </url>
+    <url>
+         <loc>http://zunedev.github.io/Zune%20software/Iris/uix-assembly/</loc>
+         <lastmod>2024-12-05</lastmod>
+    </url>
+</urlset>

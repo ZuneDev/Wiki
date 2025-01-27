@@ -78,12 +78,13 @@ The Type Export Declarations are composed of two tables: the Export Table and Al
 
 The Export Table is a length-prefixed (`UInt16`) list of exports, where each export is a type defined with a [reference](#string-references) to the local name and the [markup type](#markuptype).
 
-The Alias Table allows a UIB file to export imported types under a different name. Each entry is exactly 20 (`0x14`) bytes long and is composed of the desired alias, the dependency to load it from, and the name of the target type. Both the alias and target type name are stored a [string references](#string-references). The dependency is always referred to using an index, either into the [Type Import Table](#type-import-table) of the [Shared Binary Data Table](#binary-data-table) if one is specified, or the file's [dependencies](#dependencies).
+The Alias Table allows a UIB file to export imported types under a different name. Each entry is exactly 10 (`0x0A`) bytes long and is composed of the desired alias, the dependency to load it from, and the name of the target type. Both the alias and target type name are stored a [string references](#string-references). The dependency is always referred to using an index, either into the [Type Import Table](#type-import-table) of the [Shared Binary Data Table](#binary-data-table) if one is specified, or the file's [dependencies](#dependencies).
 
 Offset into entry   | Meaning
 ------------------- | ---------
 `0x00`              | [String reference](#string-references) to the desired Alias
 `0x04`              | `UInt16` index into the [Dependencies](#dependencies) list
+`0x06`              | [String reference](#string-references) to the target type name
 
 ### Binary Data Table
 The Binary Data Table consists of several subtables, with each one containing a different types of constant data. These subtables are stored in the following order:

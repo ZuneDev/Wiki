@@ -128,7 +128,7 @@ Start offset   | Value        | Meaning
 ## Load passes
 *[Work in progress]*
 
-Compiled UIX is loaded in $N$ main passes, listed in order of execution below. "Depersist" usually refers to reading and processing encoded information, such as type exports.
+Compiled UIX is loaded in three main passes, listed in order of execution below. "Depersist" usually refers to reading and processing encoded information, such as type exports.
 
 1. Declare types
     1. Depersist [Table of Contents](#table-of-contents)
@@ -136,9 +136,13 @@ Compiled UIX is loaded in $N$ main passes, listed in order of execution below. "
     1. Depersist [Dependencies](#dependencies)
     1. Depersist [Type Export Declarations](#type-export-declarations)
 1. Populate public model
+    1. Depersist [Type Import Table](#type-import-table)
+    1. Depersist Type Export Definition
 1. Full
+    1. Depersist Data Mappings Table
+    1. Depersist [Constants Table](#constants-table)
+    1. Depersist [Line Number Table](#line-number-table)
+    1. Depersist [Object Section](#object-section)
 
 ## TODO
-- list the tables
-    - type imports
 > Iris has two separate type systems-- the runtime types, which are your standard .NET types; and the markup type schemas, which of course are .NET types themselves, but are used to wrap runtime types for use by the UIX compiler and interpreter. Mapping from schema to runtime type and constructing instances from strings is easy enough, because those are both tasks the original UIX tooling has to do. Doing the reverse (finding the schema for a given runtime type, or encoding a runtime object into a string that can be parsed later) is much more difficult.

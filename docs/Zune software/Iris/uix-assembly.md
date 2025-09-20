@@ -74,6 +74,76 @@ Mneumonic | Name
 `INC` | PostIncrement
 `DEC` | PostDecrement
 
+### Object instantiation
+This family of instructions calls the constructor for the given object. All variants take the index of the object type to construct.
+
+#### ConstructObject
+Calls the default constructor with no parameters.
+```asm
+COBJ <typeIndex>
+```
+
+#### ConstructObjectIndirect
+Used to create 'wrappers' of another constructed object. It is used for type schemas that implement `IDynamicConstructionSchema`, which appears to only be used by `UIClassTypeSchema` for creating the root `<UI>` element. The assignment type is taken from the first operand, while the target type is popped off the stack.
+```asm
+COBJI <assignmentTypeIndex>
+```
+
+#### ConstructObjectParam
+Calls the specified constructor with *N* parameters popped from the stack, with the *N*th parameter at the top of the stack. The number of parameters must match the constructor exactly.
+```asm
+COBP <typeIndex> <constructorIndex>
+```
+
+#### ConstructFromString
+Uses the target's type converter to construct an instance from a constant string.
+```asm
+CSTR <typeIndex> <stringIndex>
+```
+
+#### ConstructFromBinary
+Uses the target type's binary decoder to construct an instance from a binary blob. The blob is stored inline and can be any length. The binary decoder is responsible for determining the length and consuming the entire blob.
+
+#### InitializeInstance
+Pops an object from the stack and initializes it using the specified type schema. This instruction is required to initialize `UIClass` and `Class` objects immediately after construction.
+```asm
+INIT <typeIndex>
+```
+
+#### InitializeInstanceIndirect
+Identical to [InitializeInstance](#initializeinstance), except the type schema is popped off the stack rather than indexed from the type imports table.
+```asm
+INITI
+```
+
+### Symbols
+This family of instructions manages symbols, usually local variables.
+
+#### LookupSymbol
+Looks up a symbol in the symbol reference table and pushes its value to the stack.
+```asm
+LSYM <symbolReferenceIndex>
+```
+
+#### WriteSymbol
+Writes a value popped from the stack to the specified symbol in the symbol reference table.
+```asm
+WSYM <symbolReferenceIndex>
+```
+
+#### WriteSymbolPeek
+Identical to [WriteSymbol](#writesymbol), except the value to be written is peeked instead of poppsed off the stack.
+```asm
+WSYMP <symbolReferenceIndex>
+```
+
+#### ClearSymbol
+If the specified symbol is a scoped local, it is undeclared. Otherwise, this instruction is a no-op.
+```asm
+CSYM <symbolReferenceIndex>
+```
+
+#### 
 
 ## TODO
 

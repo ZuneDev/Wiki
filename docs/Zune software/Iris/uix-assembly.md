@@ -92,13 +92,13 @@ COBJI <assignmentTypeIndex>
 #### ConstructObjectParam
 Calls the specified constructor with *N* parameters popped from the stack, with the *N*th parameter at the top of the stack. The number of parameters must match the constructor exactly.
 ```asm
-COBP <typeIndex> <constructorIndex>
+COBP <typeIndex>, <constructorIndex>
 ```
 
 #### ConstructFromString
 Uses the target's type converter to construct an instance from a constant string.
 ```asm
-CSTR <typeIndex> <stringIndex>
+CSTR <typeIndex>, <stringIndex>
 ```
 
 #### ConstructFromBinary
@@ -170,10 +170,10 @@ PLAD 0xFFFF
 #### PropertyDictionaryAdd
 Pops a value from the stack and assigns it to the given key in a dictionary. The same semantics from [PropertyListAdd](#propertylistadd) regarding `propretyIndex` apply.
 ```asm
-PDAD <propertyIndex> <keyConstantIndex>
+PDAD <propertyIndex>, <keyConstantIndex>
 // target.Property[value] = value
 
-PDAD 0xFFFF <keyConstantIndex>
+PDAD 0xFFFF, <keyConstantIndex>
 // target[key] = value
 ```
 
@@ -242,6 +242,39 @@ MINVA <methodIndex>
 Similar to [MethodInvokeStatic](#methodinvokestatic), except the last parameter is pushed to the stack. When this mode is used, the method return value is not pushed to the stack. Equivalent to [MethodInvokePushLastParam](#methodinvokepushlastparam) but for static methods.
 ```asm
 MINVAT <methodIndex>
+```
+
+### Type Manipulation
+This family of instructions performs operations that manipulate types.
+
+#### VerifyTypeCast
+Throws a script runtime error if the object at the top of the stack cannot be cast to the specified type.
+```asm
+VTC <propertyIndex>
+```
+
+#### ConvertType
+Pops an object from the stack and converts from one specified type to another. The converted object is pushed to the stack. Note that this is *not* equivalent to a simple cast: see [As](#as).
+```asm
+CON <toTypeIndex>, <fromTypeIndex>
+```
+
+#### IsCheck
+Pops an object from the stack and checks whether it is an instance of the specified type. The check result is pushed as a `bool` to the stack. Returns `false` is the object is `null`.
+```asm
+ISC <typeIndex>
+```
+
+#### As
+If the object at the top of the stack is assignable to the specified type, no action is taken. Otherwise, the object is replaced with `null`.
+```asm
+ASC <typeIndex>
+```
+
+#### TypeOf
+Pushes the schema of the specified type to the stack.
+```asm
+TYP <typeIndex>
 ```
 
 ## TODO

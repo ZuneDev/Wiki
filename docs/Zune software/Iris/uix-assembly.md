@@ -132,7 +132,7 @@ WSYM <symbolReferenceIndex>
 ```
 
 #### WriteSymbolPeek
-Identical to [WriteSymbol](#writesymbol), except the value to be written is peeked instead of poppsed off the stack.
+Identical to [WriteSymbol](#writesymbol), except the value to be written is peeked instead of popped off the stack.
 ```asm
 WSYMP <symbolReferenceIndex>
 ```
@@ -143,7 +143,106 @@ If the specified symbol is a scoped local, it is undeclared. Otherwise, this ins
 CSYM <symbolReferenceIndex>
 ```
 
-#### 
+### Properties
+
+#### PropertyInitialize
+Pops a value from the stack and initializes the specified property on the current instance, also popped from the stack.
+```asm
+PINI <propertyIndex>
+```
+
+#### PropertyInitializeIndirect
+Simimlar to [PropertyInitialize](#propertyinitialize), except the parent type schema is popped from the stack.
+```asm
+PINII <propertyIndex>
+```
+
+#### PropertyListAdd
+Pops a value from the stack and appends it to the end of a list. The key is read from the constants table. The target object is peeked from the stack. If `propertyIndex` is `0xFFFF`, the target object is the list itself. Otherwise, the list is read from the specified property on the target object.
+```asm
+PLAD <propertyIndex>
+// target.Property.Add(value)
+
+PLAD 0xFFFF
+// target.Add(value)
+```
+
+#### PropertyDictionaryAdd
+Pops a value from the stack and assigns it to the given key in a dictionary. The same semantics from [PropertyListAdd](#propertylistadd) regarding `propretyIndex` apply.
+```asm
+PDAD <propertyIndex> <keyConstantIndex>
+// target.Property[value] = value
+
+PDAD 0xFFFF <keyConstantIndex>
+// target[key] = value
+```
+
+#### PropertyAssign
+Assigns a value to the specified property. The target object is popped from the stack before the value is peeked.
+```asm
+PASS <propertyIndex>
+; object.Property = value
+```
+
+#### PropertyAssignStatic
+Peeks a value from the stack and assigns it to the specified static property.
+```asm
+PASST <propertyIndex>
+; StaticInstance.Property = value
+```
+
+#### PropertyGet
+Pops a parent object from the stack and pushes the value of the specified property.
+```asm
+PGET <propertyIndex>
+; object.Property
+```
+
+#### PropertyGetPeek
+Peeks an object from the stack and pushes the value of the specified property.
+```asm
+PGETP <propertyIndex>
+; object.Property
+```
+
+#### PropertyGetStatic
+Pushes the value of the specified static property to the stack.
+```asm
+PGETT <propertyIndex>
+; StaticInstance.Property
+```
+
+### Methods
+
+#### MethodInvoke
+Invokes the specified method with *N* parameters popped from the stack, with the *N*th parameter at the top of the stack. The number of parameters must match the method signature exactly. The parent object is popped from the stack. If the method has a return value, it is pushed to the stack.
+```asm
+MINV <methodIndex>
+```
+
+#### MethodInvokePeek
+Identical to [MethodInvoke](#methodinvoke), except the parent object is peeked instead of popped from the stack.
+```asm
+MINVP <methodIndex>
+```
+
+#### MethodInvokeStatic
+Identical to [MethodInvoke](#methodinvoke), except the method must be static and no parent object is popped from the stack.
+```asm
+MINVT <methodIndex>
+```
+
+#### MethodInvokePushLastParam
+Similar to [MethodInvoke](#methodinvoke), except the last parameter is pushed to the stack. When this mode is used, the method return value is not pushed to the stack.
+```asm
+MINVA <methodIndex>
+```
+
+#### MethodInvokeStaticPushLastParam
+Similar to [MethodInvokeStatic](#methodinvokestatic), except the last parameter is pushed to the stack. When this mode is used, the method return value is not pushed to the stack. Equivalent to [MethodInvokePushLastParam](#methodinvokepushlastparam) but for static methods.
+```asm
+MINVAT <methodIndex>
+```
 
 ## TODO
 

@@ -60,7 +60,7 @@ Mneumonic | Name
 `MUL` | [MathMultiply](#mathmultiply)
 `DIV` | [MathDivide](#mathdivide)
 `MOD` | [MathModulus](#mathmodulus)
-`NEG` | [MathModulus](#mathmodulus)
+`NEG` | [MathNegate](#mathnegate)
 `AND` | [LogicalAnd](#logicaland)
 `ORR` | [LogicalOr](#logicalor)
 `NOT` | [LogicalNot](#logicalnot)
@@ -275,6 +275,144 @@ ASC <typeIndex>
 Pushes the schema of the specified type to the stack.
 ```asm
 TYP <typeIndex>
+```
+
+### Arithmetic and Logical Operations
+
+#### Operation
+Performs the specified arithmetic or logical operation using the provided operation host type schema. Unary operations will pop a single value off the stack and execute the operation. Binary operations will first pop the right operand, followed by the left. The operation result is pushed to the stack.
+
+The operation host, such as `Int32Schema`, must support the requested operation. Type schemas can declare support for operations using `SupportsOperationHandler` and `PerformOperationHandler`.
+
+This is a real instruction. It is recommended to use the alternative virtual instructions described in [Arithmetic and Logical Operations](#arithmetic-and-logical-operations) for the sake of clarity.
+```asm
+OPR <operationHostTypeIndex>, <operationId>
+```
+
+#### MathAdd
+Pops two values off the stack and pushes their sum. This is a virtual instruction for [Operation](#operation).
+```asm
+ADD <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 1
+```
+
+#### MathSubtract
+Pops two values, $a$ then $b$, off the stack and pushes their difference, $b - a$. This is a virtual instruction for [Operation](#operation).
+```asm
+SUB <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 2
+```
+
+#### MathMultiply
+Pops two values off the stack and pushes their product. This is a virtual instruction for [Operation](#operation).
+```asm
+MUL <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 3
+```
+
+#### MathDivide
+Pops two values, $a$ then $b$, off the stack and pushes their quotient, $b / a$. This is a virtual instruction for [Operation](#operation).
+```asm
+DIV <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 4
+```
+
+#### MathModulus
+Pops two values, $a$ then $b$, off the stack and pushes their remainder, $b \bmod a$. This is a virtual instruction for [Operation](#operation).
+```asm
+MOD <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 5
+```
+
+#### MathNegate
+Pops a value $a$ off the stack and pushes its negation, $-a$. This is a virtual instruction for [Operation](#operation).
+```asm
+NEG <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 16
+```
+
+#### LogicalAnd
+Pops two values, $a$ then $b$, off the stack and pushes their logical AND, $a \land b$. This is a virtual instruction for [Operation](#operation).
+```asm
+AND <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 6
+```
+
+#### LogicalOr
+Pops two values, $a$ then $b$, off the stack and pushes their logical OR, $b \lor a$. This is a virtual instruction for [Operation](#operation).
+```asm
+ORR <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 7
+```
+
+#### LogicalNot
+Pops a value $a$ off the stack and pushes its logical negation, $\lnot a$. This is a virtual instruction for [Operation](#operation).
+```asm
+NOT <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 15
+```
+
+#### RelationalEquals
+Pops two values, $a$ then $b$, off the stack and pushes whether they are equal, $b = a$. This is a virtual instruction for [Operation](#operation).
+```asm
+REQ <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 8
+```
+
+#### RelationalNotEquals
+Pops two values, $a$ then $b$, off the stack and pushes whether they are not equal, $b \neq a$. This is a virtual instruction for [Operation](#operation).
+```asm
+RNE <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 9
+```
+
+#### RelationalLessThan
+Pops two values, $a$ then $b$, off the stack and pushes whether the result of $b \lt a$. This is a virtual instruction for [Operation](#operation).
+```asm
+RLT <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 10
+```
+
+#### RelationalGreaterThan
+Pops two values, $a$ then $b$, off the stack and pushes whether they are not equal, $b \gt a$. This is a virtual instruction for [Operation](#operation).
+```asm
+RGT <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 11
+```
+
+#### RelationalLessThanEquals
+Pops two values, $a$ then $b$, off the stack and pushes whether they are less than or equal, $b \le a$. This is a virtual instruction for [Operation](#operation).
+```asm
+RLE <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 12
+```
+
+#### RelationalGreaterThanEquals
+Pops two values, $a$ then $b$, off the stack and pushes whether they are greater than or equal, $b \ge a$. This is a virtual instruction for [Operation](#operation).
+```asm
+RGE <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 13
+```
+
+#### RelationalIs
+Pops two values, `a` then `b`, off the stack and pushes whether `b is a`. This is a virtual instruction for [Operation](#operation), though it does not appear to be used anywhere.
+```asm
+RIS <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 14
+```
+
+#### PostIncrement
+Pops a value $a$ off the stack and pushes $a + 1$. This is a virtual instruction for [Operation](#operation).
+```asm
+INC <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 17
+```
+
+#### PostDecrement
+Pops a value $a$ off the stack and pushes $a - 1$. This is a virtual instruction for [Operation](#operation).
+```asm
+RNE <operationHostTypeIndex>
+DEC <operationHostTypeIndex>, 18
 ```
 
 ## TODO

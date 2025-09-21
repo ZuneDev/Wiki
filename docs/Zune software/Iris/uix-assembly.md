@@ -411,8 +411,8 @@ OPR <operationHostTypeIndex>, 17
 #### PostDecrement
 Pops a value $a$ off the stack and pushes $a - 1$. This is a virtual instruction for [Operation](#operation).
 ```asm
-RNE <operationHostTypeIndex>
-DEC <operationHostTypeIndex>, 18
+DEC <operationHostTypeIndex>
+OPR <operationHostTypeIndex>, 18
 ```
 
 ## TODO

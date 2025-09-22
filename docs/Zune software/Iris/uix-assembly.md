@@ -415,6 +415,88 @@ DEC <operationHostTypeIndex>
 OPR <operationHostTypeIndex>, 18
 ```
 
+### Stack Manipulation
+
+#### PushNull
+Pushes a `null` value to the stack.
+```asm
+PSHN
+```
+
+#### PushConstant
+Pushes the specified constant to the stack.
+```asm
+PSHC <constantIndex>
+PSHC @<constantName>
+```
+
+#### PushThis
+Pushes the current markup instance, an `IMarkupTypeBase`, to the stack.
+```asm
+PSHT
+```
+
+#### DiscardValue
+Pops an object off the stack and does nothing.
+```asm
+DIS
+```
+
+### Control Flow
+
+#### ReturnValue
+Returns the topmost item from the stack.
+```asm
+RET
+```
+
+#### ReturnVoid
+Returns from the script.
+```asm
+RETV
+```
+
+#### JumpIfFalse
+Pops a boolean value off the stack and jumps to the specified offset if `false`.
+```asm
+JMPF <offset>
+```
+
+#### JumpIfFalsePeek
+Peeks a boolean value from the top of the stack and jumps to the specified offset if `false`.
+```asm
+JMPFP <offset>
+```
+
+#### JumpIfTruePeek
+Peeks a boolean value from the top of the stack and jumps to the specified offset if `true`.
+```asm
+JMPTP <offset>
+```
+
+#### JumpIfDictionaryContains
+Jumps to the specified offset if a dictionary contains the specified key. Follows the same collection semantics as [PropertyDictionaryAdd](#propertydictionaryadd).
+```asm
+JMPD <propertyIndex>, <keyConstantIndex>, <offset>
+```
+
+#### JumpIfNullPeek
+Peeks a value off the stack and jumps to the specified offset if `null`.
+```asm
+JMPNP <offset>
+```
+
+#### Jump
+Unconditionally jumps to the specified offset.
+```asm
+JMP <offset>
+```
+
+### Listeners
+
+#### ConstructListenerStorage
+
+
 ## TODO
 
 ### `IStringEncodable`

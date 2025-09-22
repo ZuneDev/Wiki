@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root {
+    --bs-link-color: #EC008C;
+    --bs-link-color-rgb: 236, 0, 140;
+    --bs-link-hover-color: #7B006D;
+    --bs-link-hover-color-rgb: 123, 0, 109;
+    --bs-border-color: #EEE;
+    --bs-font-monospace: 'Fira Code';
+}
+
+h1 {
+    text-transform: lowercase;
+}
+
+h2 {
+    text-transform: lowercase;
+    font-weight: 600;
+}
+
+h3 {
+    text-transform: lowercase;
+}
+
+.navbar-dark {
+    --bs-navbar-color: black;
+    --bs-navbar-hover-color: black;
+    --bs-navbar-disabled-color: #CCC;
+    --bs-navbar-active-color: #E9580A;
+    --bs-navbar-brand-color: #333;
+    --bs-navbar-brand-hover-color: black;
+    --bs-navbar-toggler-border-color: transparent;
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.fixed-top .navbar-toggler {
+    --bs-navbar-toggler-border-radius: 0;
+    background-color: white;
+}
+
+.navbar.bg-primary {
+    background-image: linear-gradient(white, white 75%, transparent);
+    background-color: transparent !important;
+}
+
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: #F10DA2;
+    --bs-dropdown-link-hover-bg: #7B006D;
+}
+
+li.nav-item a {
+    color: #888;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: lowercase;
+}
+
+.bs-sidebar .nav > li > a.active, .bs-sidebar .nav > li > a.active:hover, .bs-sidebar .nav > li > a.active:focus {
+    border-right: 4px solid;
+}
+
+.table {
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.015);
+    --bs-table-color: #333;
+}
+
+.table thead {
+    background-color: #EEE;
+    text-transform: uppercase;
+}
+
+.table > :not(caption) > * > * {
+    background-color: inherit;
+}
+
+hr {
+    border-top: 1px solid #EEE;
+}
+
+.pagetree-functions {
+    display: none;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #2fa4e7;
+    /* --bs-btn-border-color: rgba(255, 255, 255, 128); */
+    --bs-btn-border-color: unset;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #288bc4;
+    --bs-btn-hover-border-color: rgba(255, 255, 255, 179);
+    --bs-btn-focus-shadow-rgb: 78,178,235;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #2683b9;
+    --bs-btn-active-border-color: rgba(255, 255, 255, 102);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #2fa4e7;
+    --bs-btn-disabled-border-color: rgba(255, 255, 255, 0);
+
+    --bs-btn-border-radius: 0.3vmax;
+    --bs-btn-border-width: 2px;
+
+    background-image: linear-gradient(#EC008C, #BE0071);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+footer {
+    color: #999;
+}

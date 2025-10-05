@@ -18,6 +18,7 @@ plugins:
   - search
   - callouts
   - pagetree
+  - roamlinks
 
 extra_javascript:
   - javascripts/mathjax.js

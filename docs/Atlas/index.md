@@ -1,4 +1,4 @@
-# Home
+# Atlas
 Welcome,
 my name is Lars and this is my digital garden about the [[Zune HD|Zune]]!
 
@@ -9,12 +9,12 @@ For a guide on how to install the OpenZDK click [[OpenZDK Setup|here]].
 Files marked with 🗺️ (World Map Emoji) are overview notes and link you to all the subtopics in that topic. 
 
 ## Topics
-- [[🗺️ OpenZDK]]
-- [[🗺️ OpenGL ES]]
-- [[🗺️ Official Documentation]]
-- [[🗺️ Windows CE 6.0]]
-- [[🗺️ File Types]]
-- [[🗺️ XNA Framework]]
+- [[OpenZDK]]
+- [[OpenGL ES]]
+- [[Official Documentation]]
+- [[Windows CE 6.0]]
+- [[File Types]]
+- [[XNA Framework]]
 
 
 [[Workbench]] contains bunch of info. I add stuff quickly there during research so I don't forget it. 

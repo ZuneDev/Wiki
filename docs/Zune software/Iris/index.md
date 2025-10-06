@@ -48,6 +48,6 @@ The UIX XML syntax was changed sightly from the source included in Zune 2.0. For
 ### 4.x
 Iris 4.0 was a minor update released with Zune 4.0 in 2009, which utilized a new version of the compiler and [UIB 4](./compiled-uix.md) to reduce the size and overhead of UIX.
 
-Iris 4 also included `UIXcontrols.dll`, a simple library containing some .NET code and implementations of basic controls, such as buttons and scrollbars, and some higher level but still primitive building blocks.
+Iris 4 also included `UIXcontrols.dll`, a simple library containing some .NET code and implementations of basic controls such as buttons and scrollbars and some higher level but still primitive building blocks.
 
 Zune 4.8.2345.0 shipped the last known version of Iris, with the same assembly version as Zune.

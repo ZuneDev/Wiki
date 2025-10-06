@@ -2,7 +2,7 @@
 Before the OpenZDK was released it was only possible to build apps using the XNA Framework. These apps use the .NET Compact Framework and the XNA Framework to run. The .NET Compact Framework is a tiny subset of the .NET framework and doesn't even know about the OS it is running on. 
 
 ## Files
-XNA Apps run in their own [[ZCP Files|ZCP]] container, and can only access data from their own container. This access restriction is only imposed by the XNA Framework/.NET Framework, as [[🗺️ OpenZDK]] apps have access to more files. Although they still can't access any system files. By default two containers are mounted:
+XNA Apps run in their own [ZCP](../ZCP%20Files.md) container, and can only access data from their own container. This access restriction is only imposed by the XNA Framework/.NET Framework, as [🗺️ OpenZDK](../OpenZDK/index.md) apps have access to more files. Although they still can't access any system files. By default two containers are mounted:
 
 - ``gamert``: Hosts all the XNA Runtime libraries 
 - ``gametitle``: Hosts the content of XNA application
@@ -24,4 +24,4 @@ Debug.WriteLine("Container Path: " + container.Path);
 The file path can be composited using ``container.Path + PATH_TO_YOUR_FILE``.
 
 ---
-[[🗺️ XNA Framework]]
+[🗺️ XNA Framework](./index.md)

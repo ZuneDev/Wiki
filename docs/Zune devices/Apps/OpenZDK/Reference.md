@@ -39,4 +39,4 @@ This file just includes all other ZDK header files.
 - **Description:** Get touch and accelerometer data
 
 ---
-[[🗺️ OpenZDK]]
+[🗺️ OpenZDK](./index.md)

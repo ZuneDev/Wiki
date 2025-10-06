@@ -1,5 +1,5 @@
 # Zune HD
-![[ZuneHD.jpg]]
+![](../../img/ZuneHD.jpg)
 
 The Zune HD was released on September 15, 2009 and was the last Zune to be released by Microsoft.
 

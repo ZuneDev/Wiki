@@ -71,4 +71,4 @@ These steps can be repeated with the other files as well.
 [https://nah6.com/~itsme/cvs-xdadevtools/dumprom/](https://nah6.com/~itsme/cvs-xdadevtools/dumprom/ "https://nah6.com/~itsme/cvs-xdadevtools/dumprom/")
 
 ---
-[[🗺️ File Types]]
+[🗺️ File Types](../Atlas/File%20Types.md)

@@ -16,4 +16,4 @@ HRESULT WINAPI ZDKFont_Initialize();
 ```
 
 ---
-[[OpenZDK Reference]]
+[OpenZDK Reference](../index.md)

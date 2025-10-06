@@ -10,4 +10,4 @@ The official tool (``XUITool``) to edit the UI was shipped with the XBOX SDK.
 - [[Tools/XzpTool 2.exe]]: Can be used to extract the files.
 
 ---
-[[🗺️ File Types]]
+[🗺️ File Types](../Atlas/File%20Types.md)

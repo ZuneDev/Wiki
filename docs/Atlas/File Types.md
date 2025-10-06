@@ -3,6 +3,6 @@ The Zune uses many different file types from binary files for roms or files to p
 
 ## Types
 - [Firmware Files](../Zune%20devices/Firmware%20Files.md)
-- [[ZCP Files]]
-- [[Gem Files]]
+- [ZCP Files](../Zune%20devices/Apps/ZCP%20Files.md)
+- [Gem Files](../Zune%20devices/Gem%20Files.md)
 

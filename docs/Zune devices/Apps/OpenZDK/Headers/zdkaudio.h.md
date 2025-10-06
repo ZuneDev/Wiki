@@ -36,4 +36,4 @@ typedef enum {
 
 
 ---
-[[OpenZDK Reference]]
+[OpenZDK Reference](../index.md)

@@ -18,10 +18,10 @@
 9. Click Upgrade
 
  After step 4 the window should look like this:
- ![[Pasted image 20220720212324.png]]
+ ![](../../img/Pasted image 20220720212324.png)
 
 ## References 
 - [Upgrading Visual Studio 2008 from trial to full on Windows 7 Beta (Build 7000) - Stack Overflow](https://stackoverflow.com/questions/453262/upgrading-visual-studio-2008-from-trial-to-full-on-windows-7-beta-build-7000)
 
 ---
-[[🗺️ OpenZDK]]
+[🗺️ OpenZDK](./OpenZDK/index.md)

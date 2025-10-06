@@ -19,4 +19,4 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Power\State\Unattended\{98C5
 
 
 ---
-[[🗺️ Windows CE 6.0]]
+[🗺️ Windows CE 6.0](../Zune%20HD/Windows%20CE%206.0.md)

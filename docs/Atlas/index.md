@@ -1,22 +1,14 @@
 # Atlas
-Welcome,
-my name is Lars and this is my digital garden about the [[Zune HD|Zune]]!
+Welcome, Argonauts!
 
-Here I will be sharing all the information I find about the Zune. I will mostly talk about its hardware / firmware and how to develop applications for it more than 20 years after it was first published. Most of the information will revolve around the **[[Zune HD]]** as it has the best hardware and is less secure than the older models. 
-
-For a guide on how to install the OpenZDK click [[OpenZDK Setup|here]].
-
-Files marked with 🗺️ (World Map Emoji) are overview notes and link you to all the subtopics in that topic. 
+For a guide on how to install the OpenZDK click [here](../Zune%20devices/Apps/OpenZDK/Setup.md).
 
 ## Topics
-- [[OpenZDK]]
-- [[OpenGL ES]]
-- [[Official Documentation]]
-- [[Windows CE 6.0]]
-- [[File Types]]
-- [[XNA Framework]]
+- [OpenZDK](../Zune%20devices/Apps/OpenZDK/index.md)
+- [OpenGL ES](../Zune%20devices/Zune%20HD/OpenGL%20ES.md)
+- [Official Documentation](./Official%20Documentation.md)
+- [Windows CE 6.0](../Zune%20devices/Zune%20HD/Windows%20CE%206.0.md)
+- [File Types](./File%20Types.md)
+- [XNA Framework](../Zune%20devices/Apps/XNA%20Framework/index.md)
 
-
-[[Workbench]] contains bunch of info. I add stuff quickly there during research so I don't forget it. 
-
-![[ZuneHD.jpg]]
+![A black Zune HD resting against a potted plant](../img/ZuneHD.jpg)

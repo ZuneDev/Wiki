@@ -6,7 +6,7 @@ The Zune automatically disables its WIFI connection after a few minutes to save 
 
 Liberate actually implemented a somewhat working fix in ``RelayInput.exe``, which just pings google.com and yahoo.com every couple of mins. Unfortunately this fix never starts as Liberate checks ``ZDKCloud_IsConnected()`` to see if it can reach the Zune cloud. Which nowadays always returns ``FALSE`` as the Zune Cloud does not exist anymore. 
 
-I am currently [[Keep WIFI Enabled|looking for a way]] to really fix this.
+I am currently [looking for a way](../Keep%20WIFI%20Enabled.md) to really fix this.
 
 ---
-[[🗺️ OpenZDK]]
+[🗺️ OpenZDK](./index.md)

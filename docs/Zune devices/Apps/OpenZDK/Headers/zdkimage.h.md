@@ -12,4 +12,4 @@ DECLARE_HANDLE(HIMAGE);
 
 
 ---
-[[OpenZDK Reference]]
+[OpenZDK Reference](../index.md)

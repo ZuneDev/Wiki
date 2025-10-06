@@ -1,5 +1,5 @@
 # CE 6.0 Architecture
-![[SystemArchitectureDiagram.gif]]
+![Diagram of the architecture of Windows CE 6.0](../../img/SystemArchitectureDiagram.gif)
 
 ## System Files/Components
 ### K.xxx.DLL
@@ -11,7 +11,7 @@ Any DLL that is use by both kernel-mode and user-mode processes will be loaded a
 Services run in user-mode and are handled by the ``Services Manager``.
 
 ### Device Manager
-The [[Device Manager]] (``Device.DLL``) runs in kernel-mode and loads the device drivers. It supports loading drivers on boot or on demand. Windows also provides a user-mode Device Manager for drivers installed after shipping for example.
+The [`Device.DLL`](./Device%20Manager.md) runs in kernel-mode and loads the device drivers. It supports loading drivers on boot or on demand. Windows also provides a user-mode Device Manager for drivers installed after shipping for example.
 
 ### NK.EXE
 This used to be the kernel, but now it just contains a thin abstraction layer and compatibility layer, provided by the OEM. The actual Kernel now lives in ``Kernel.DLL``.
@@ -32,4 +32,4 @@ GWES provides graphical functionality.
 - [Microsoft - Windows Embedded CE Architecture](https://docs.microsoft.com/en-us/previous-versions/windows/embedded/ee504804(v=winembedded.60))
 
 ---
-[[🗺️ Windows CE 6.0]]
+[🗺️ Windows CE 6.0](./Windows%20CE%206.0.md)

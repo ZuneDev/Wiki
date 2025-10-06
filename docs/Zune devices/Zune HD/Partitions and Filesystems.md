@@ -179,4 +179,4 @@ MSIFS uses the ``EXFAT`` format.
 **DLL:** filesys.dll
 
 ---
-[[🗺️ Windows CE 6.0]]
+[🗺️ Windows CE 6.0](./Windows%20CE%206.0.md)

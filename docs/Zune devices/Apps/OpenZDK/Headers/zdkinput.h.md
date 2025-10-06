@@ -37,4 +37,4 @@ typedef struct {
 ```
 
 ---
-[[OpenZDK Reference]]
+[OpenZDK Reference](../index.md)

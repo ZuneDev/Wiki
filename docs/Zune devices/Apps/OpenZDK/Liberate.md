@@ -1,12 +1,12 @@
 # Liberate
-Liberate is a application developed by ``Netrix`` which makes it possible to use the ``explorer.exe`` on your Zune. It also provides functionality to run OpenGL, DirectX and Windows Apps on Liberate. 
+Liberate is a application developed by ``Netrix`` which makes it possible to use the ``explorer.exe`` on [Zune HD](../../Zune%20HD/index.md). It also provides functionality to run OpenGL, DirectX and Windows Apps on Liberate.
 
-## WIFI Problem
-The Zune automatically disables its WIFI connection after a few minutes to save battery. This is a huge problem when trying to run the Windows CE Remote debugging tools through Liberate for example. 
+## Wi-Fi problem
+In order to save battery, the Zune automatically disables its Wi-Fi connection after a few minutes. This causes problems when trying to run executables that utilzie Wi-Fi for extended periods of time, such as when using the Windows CE Remote debugging tools through Liberate. 
 
-Liberate actually implemented a somewhat working fix in ``RelayInput.exe``, which just pings google.com and yahoo.com every couple of mins. Unfortunately this fix never starts as Liberate checks ``ZDKCloud_IsConnected()`` to see if it can reach the Zune cloud. Which nowadays always returns ``FALSE`` as the Zune Cloud does not exist anymore. 
+Liberate has a somewhat working fix in ``RelayInput.exe``, which simply pings `google.com` and `yahoo.com` every couple of minutes. However, this fix is only triggered when Liberate detects the Zune is online via ``ZDKCloud_IsConnected()``, which nowadays always returns ``FALSE`` since it uses the now-offline Zune webservices as a litmus test for internet connectivity.
 
-I am currently [looking for a way](../Keep%20WIFI%20Enabled.md) to really fix this.
+Current research on a permanent fix are [here](../Keep%20WIFI%20Enabled.md).
 
 ---
 [🗺️ OpenZDK](./index.md)

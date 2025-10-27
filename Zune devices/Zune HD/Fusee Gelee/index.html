@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="http://zunedev.github.io/Zune%20devices/Zune%20HD/Fusee%20Gelee/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Fusee Gelee - ZuneDev Wiki</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../assets/mkdocs_pagetree_plugin.css" rel="stylesheet">
+        <link href="../../../style.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">ZuneDev Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Welcome</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Atlas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Atlas/" class="dropdown-item">Atlas</a>
+</li>
+                                    
+<li>
+    <a href="../../../Atlas/File%20Types/" class="dropdown-item">File Types</a>
+</li>
+                                    
+<li>
+    <a href="../../../Atlas/Official%20Documentation/" class="dropdown-item">Official Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../../../Atlas/Paths/" class="dropdown-item">Paths</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Zune devices</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Firmware%20Files/" class="dropdown-item">Firmware Files</a>
+</li>
+                                    
+<li>
+    <a href="../../Gem%20Files/" class="dropdown-item">Gem Files</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Apps/Activating%20Visual%20Studio%202008%20Profressional/" class="dropdown-item">Activating VS 2008 Professional</a>
+</li>
+            
+<li>
+    <a href="../../Apps/Keep%20WIFI%20Enabled/" class="dropdown-item">Keep WIFI Enabled</a>
+</li>
+            
+<li>
+    <a href="../../Apps/ZCP%20Files/" class="dropdown-item">ZCP Files</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">OpenZDK</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Apps/OpenZDK/" class="dropdown-item">OpenZDK</a>
+</li>
+            
+<li>
+    <a href="../../Apps/OpenZDK/Liberate/" class="dropdown-item">Liberate</a>
+</li>
+            
+<li>
+    <a href="../../Apps/OpenZDK/Reference/" class="dropdown-item">Open ZDK Reference</a>
+</li>
+            
+<li>
+    <a href="../../Apps/OpenZDK/Setup/" class="dropdown-item">Setup</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Headers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Apps/OpenZDK/Headers/ZDKSystem_ShowSplashScreen/" class="dropdown-item">ZDKSystem_ShowSplashScreen(int flag)</a>
+</li>
+            
+<li>
+    <a href="../../Apps/OpenZDK/Headers/zdkaudio.h/" class="dropdown-item">zdkaudio.h</a>
+</li>
+            
+<li>
+    <a href="../../Apps/OpenZDK/Headers/zdkcontent.h/" class="dropdown-item">zdkcontent.h</a>
+</li>
+            
+<li>
+    <a href="../../Apps/OpenZDK/Headers/zdkdisplay.h/" class="dropdown-item">zdkdisplay.h</a>
+</li>
+            
+<li>
+    <a href="../../Apps/OpenZDK/Headers/zdkfont.h/" class="dropdown-item">zdkfont.h</a>
+</li>
+            
+<li>
+    <a href="../../Apps/OpenZDK/Headers/zdkimage.h/" class="dropdown-item">zdkimage.h</a>
+</li>
+            
+<li>
+    <a href="../../Apps/OpenZDK/Headers/zdkinput.h/" class="dropdown-item">zdkinput.h</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">XNA Framework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Apps/XNA%20Framework/" class="dropdown-item">XNA Framework</a>
+</li>
+            
+<li>
+    <a href="../../Apps/XNA%20Framework/XNA%20Apps/" class="dropdown-item">XNA Apps</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Zune HD</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Zune HD</a>
+</li>
+            
+<li>
+    <a href="../CE%206.0%20Architecture/" class="dropdown-item">CE 6.0 Architecture</a>
+</li>
+            
+<li>
+    <a href="../Device%20Manager/" class="dropdown-item">Device Manger</a>
+</li>
+            
+<li>
+    <a href="../Exploits/" class="dropdown-item">Exploits</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Fusee Gelee</a>
+</li>
+            
+<li>
+    <a href="../OpenGL%20ES/" class="dropdown-item">OpenGL ES</a>
+</li>
+            
+<li>
+    <a href="../Partitions%20and%20Filesystems/" class="dropdown-item">Partitions and Filesystems</a>
+</li>
+            
+<li>
+    <a href="../Windows%20CE%206.0/" class="dropdown-item">Windows CE 6.0</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Zune software</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Zune%20software/" class="dropdown-item">Zune software</a>
+</li>
+                                    
+<li>
+    <a href="../../../Zune%20software/radio/" class="dropdown-item">Radio</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Iris</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Zune%20software/Iris/" class="dropdown-item">Microsoft Iris</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20software/Iris/compiled-uix/" class="dropdown-item">Compiled UIX v4</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20software/Iris/uix-assembly/" class="dropdown-item">UIX Assembly</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Exploits/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../OpenGL%20ES/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/ZuneDev/Wiki/blob/main/docs/Zune devices/Zune HD/Fusee Gelee.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#fusee-gelee" class="nav-link">Fusée Gelée</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#vulnerability-details" class="nav-link">Vulnerability Details</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#proof-of-concept" class="nav-link">Proof of Concept</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#recommended-mitigations" class="nav-link">Recommended Mitigations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p><em>Reproduced from <a href="https://switch.hacks.guide/fusee_gelee.html">NH Switch Guide</a> (<a href="https://github.com/nh-server/switch-guide/blob/master/docs/fusee_gelee.md">repo</a>)</em></p>
+<h1 id="fusee-gelee">Fusée Gelée</h1>
+<p>This report documents Fusée Gelée, a coldboot vulnerability that allows full, unauthenticated arbitrary code execution from an early bootROM context via Tegra Recovery Mode (RCM) on NVIDIA's Tegra line of embedded processors. As this vulnerability allows arbitrary code execution on the Boot and Power Management Processor (BPMP) before any lock-outs take effect, this vulnerability compromises the entire root-of-trust for each processor, and allows exfiltration of secrets e.g. burned into device fuses.</p>
+<table>
+<thead>
+<tr>
+<th>Quick vitals: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Reporter:</em></td>
+<td>Katherine Temkin (@ktemkin)</td>
+</tr>
+<tr>
+<td><em>Affiliation:</em></td>
+<td>ReSwitched (https://reswitched.tech)</td>
+</tr>
+<tr>
+<td><em>E-mail:</em></td>
+<td>k@ktemkin.com</td>
+</tr>
+<tr>
+<td><em>Affects:</em></td>
+<td>Tegra SoCs, independent of software stack</td>
+</tr>
+<tr>
+<td><em>Versions:</em></td>
+<td>believed to affect Tegra SoCs released prior to the T186 / X2</td>
+</tr>
+<tr>
+<td><em>Impact:</em></td>
+<td>early bootROM code execution with no software requirements, which can lead to full compromise of on-device secrets where USB access is possible</td>
+</tr>
+<tr>
+<td><em>Disclosure</em></td>
+<td>public disclosure planned for June 15th, 2018</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vulnerability-summary">Vulnerability Summary</h3>
+<p>The USB software stack provided inside the boot instruction rom (IROM/bootROM) contains a copy operation whose length can be controlled by an attacker. By carefully constructing a USB control request, an attacker can leverage this vulnerability to copy the contents of an attacker-controlled buffer over the active execution stack, gaining control of the Boot and Power Management processor (BPMP) before any lock-outs or privilege reductions occur. This execution can then be used to exfiltrate secrets and to load arbitrary code onto the main CPU Complex (CCPLEX) "application processors" at the highest possible level of privilege (typically as the TrustZone Secure Monitor at PL3/EL3).</p>
+<hr />
+<h3 id="public-disclosure-notice">Public Disclosure Notice</h3>
+<p>This vulnerability is notable due to the significant number and variety of devices affected, the severity of the issue, and the immutability of the relevant code on devices already delivered to end users. This vulnerability report is provided as a courtesy to help aid remediation efforts, guide communication, and minimize impact to users.</p>
+<p>As other groups appear to have this or an equivalent exploit-- <a href="http://team-xecuter.com/team-xecuter-coming-to-your-nintendo-switch-console/">including a group who claims they will be selling access to an implementation of such an exploit</a>-- it is the author and the ReSwitched team's belief that prompt public disclosure best serves the public interest. By minimizing the information asymmetry between the general public and exploit-holders and notifying the public, users will be able to best assess how this vulnerability impacts their personal threat models.</p>
+<p>Accordingly, ReSwitched anticipates public disclosure of this vulnerability:</p>
+<ul>
+<li>If another group releases an implementation of the identified vulnerability; or</li>
+<li>On June 15th, 2018, whichever comes first.</li>
+</ul>
+<hr />
+<h2 id="vulnerability-details">Vulnerability Details</h2>
+<p>The core of the Tegra boot process is approximated by the following block of pseudo-code, as obtained by reverse-engineering an IROM extracted from a vulnerable T210 system:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// If this is a warmboot (from &quot;sleep&quot;), restore the saved state from RAM.</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">read_scratch0_bit</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">restore_warmboot_image</span><span class="p">(</span><span class="o">&amp;</span><span class="n">load_addr</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// Otherwise, bootstrap the processor.</span>
+<span class="k">else</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">// Allow recovery mode to be forced by a PMC scratch bit or physical straps.</span>
+<span class="w">  </span><span class="n">force_recovery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">check_for_rcm_straps</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">read_scratch0_bit</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Determine whether to use USB2 or USB3 for RCM.</span>
+<span class="w">  </span><span class="n">determine_rcm_usb_version</span><span class="p">(</span><span class="o">&amp;</span><span class="n">usb_version</span><span class="p">);</span>
+<span class="w">  </span><span class="n">usb_ops</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">set_up_usb_ops</span><span class="p">(</span><span class="n">usb_version</span><span class="p">);</span>
+<span class="w">  </span><span class="n">usb_ops</span><span class="o">-&gt;</span><span class="n">initialize</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// If we&#39;re not forcing recovery, attempt to load an image from boot media.</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">force_recovery</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// If we succeeded, don&#39;t fall back into recovery mode.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">read_boot_configuration_and_images</span><span class="p">(</span><span class="o">&amp;</span><span class="n">load_addr</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">goto</span><span class="w"> </span><span class="n">boot_complete</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// In all other conditions</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">read_boot_images_via_usb_rcm</span><span class="p">(</span><span class="o">&lt;</span><span class="n">snip</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">load_addr</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">SUCCESS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="cm">/* load address is poisoned here */</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nl">boot_complete</span><span class="p">:</span>
+<span class="w">  </span><span class="cm">/* apply lock-outs, and boot the program at address load_address  */</span>
+</code></pre></div>
+<p>Tegra processors include a USB Recovery Mode (RCM), which we can observe to be activated under a number of conditions:</p>
+<ul>
+<li>If the processor fails to find a valid Boot Control Table (BCT) + bootloader on its boot media;</li>
+<li>If processor straps are pulled to a particular value e.g. by holding a button combination; or</li>
+<li>If the processor is rebooted after a particular value is written into a power management controller scratch register.</li>
+</ul>
+<p>USB recovery mode is present in all devices, including devices that have been production secured. To ensure that USB recovery mode does not allow unauthenticated communications, RCM requires all recovery commands be signed using either RSA or via AES-CMAC.</p>
+<p>The bootloader's implementation of the Tegra RCM protocol is simple, and exists to allow loading a small piece of code (called the <em>miniloader</em> or <em>applet</em>) into the bootloader's local Instruction RAM (IRAM). In a typical application, this <em>applet</em> is <code>nvtboot-recovery</code>, a stub which allows further USB communications to bootstrap a system or to allow system provisioning.</p>
+<p>The RCM process is approximated by the following pseudo-code, again obtained via reverse engineering a dumped IROM from a T210:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Significantly simplified for clarity, with error checking omitted where unimportant.</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Repeatedly handle USB standard events on the control endpoint EP0.</span>
+<span class="w">  </span><span class="n">usb_ops</span><span class="o">-&gt;</span><span class="n">handle_control_requests</span><span class="p">(</span><span class="n">current_dma_buffer</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Try to send the device ID over the main USB data pipe until we succeed.</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">rcm_send_device_id</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">USB_NOT_CONFIGURED</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">usb_initialized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// Once we&#39;ve made a USB connection, accept RCM commands on EP1.</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">usb_initialized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Read a full RCM command and any associated payload into a global buffer.</span>
+<span class="w">    </span><span class="c1">// (Error checking omitted for brevity.)</span>
+<span class="w">    </span><span class="n">rcm_read_command_and_payload</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Validate the received RCM command; e.g. by checking for signatures</span>
+<span class="w">    </span><span class="c1">// in RSA or AES_CMAC mode, or by trivially succeeding if we&#39;re not in</span>
+<span class="w">    </span><span class="c1">// a secure mode.</span>
+<span class="w">    </span><span class="n">rc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rcm_validate_command</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">VALIDATION_PASS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">rc</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Handle the received and validated command.</span>
+<span class="w">    </span><span class="c1">// For a &quot;load miniloader&quot; command, this sanity checks the (validated)</span>
+<span class="w">    </span><span class="c1">// miniloader image and takes steps to prevent re-use of signed data not</span>
+<span class="w">    </span><span class="c1">// intended to be used as an RCM command.</span>
+<span class="w">    </span><span class="n">rcm_handle_command_complete</span><span class="p">(...);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>It is important to note that a full RCM command <em>and its associated payload</em> are read into 1) a global buffer, and 2) the target load address, respectively, before any signature checking is done. This effectively grants the attacker a narrow window in which they control a large region of unvalidated memory.</p>
+<p>The largest vulnerability surface area occurs in the <code>rcm_read_command_and_payload</code> function, which accepts the RCM command and payload packets via a USB bulk endpoint. For our purposes, this endpoint is essentially a simple pipe for conveyance of blocks of binary data separate from standard USB communications.</p>
+<p>The <code>rcm_read_command_and_payload</code> function actually contains several issues-- of which exactly one is known to be exploitable:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">uint32_t</span><span class="w"> </span><span class="n">total_rxd</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">uint32_t</span><span class="w"> </span><span class="n">total_to_rx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x400</span><span class="p">;</span>
+
+<span class="c1">// Loop until we&#39;ve received our full command and payload.</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">total_rxd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">total_to_rx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Switch between two DMA buffers, so the USB is never DMA&#39;ing into the same</span>
+<span class="w">  </span><span class="c1">// buffer that we&#39;re processing.</span>
+<span class="w">  </span><span class="n">active_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">next_buffer</span><span class="p">;</span>
+<span class="w">  </span><span class="n">next_buffer</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">switch_dma_buffers</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Start a USB DMA transaction on the RCM bulk endpoint, which will hopefully</span>
+<span class="w">  </span><span class="c1">// receive data from the host in the background as we copy.</span>
+<span class="w">  </span><span class="n">usb_ops</span><span class="o">-&gt;</span><span class="n">start_nonblocking_bulk_read</span><span class="p">(</span><span class="n">active_buffer</span><span class="p">,</span><span class="w"> </span><span class="mh">0x1000</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// If we&#39;re in the first 680-bytes we&#39;re receiving, this is part of the RCM</span>
+<span class="w">  </span><span class="c1">// command, and we should read it into the command buffer.</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">total_rxd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">680</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* copy data from the DMA buffer into the RCM command buffer until we&#39;ve</span>
+<span class="cm">       read a full 680-byte RCM command */</span>
+
+<span class="w">    </span><span class="c1">// Once we&#39;ve received the first four bytes of the RCM command,</span>
+<span class="w">    </span><span class="c1">// use that to figure out how much data should be received.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">total_rxd</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// validate:</span>
+<span class="w">      </span><span class="c1">//  -- the command won&#39;t exceed our total RAM</span>
+<span class="w">      </span><span class="c1">//     (680 here, 0x30000 in upper IRAM)</span>
+<span class="w">      </span><span class="c1">//  -- the command is &gt;= 0x400 bytes</span>
+<span class="w">      </span><span class="c1">//  -- the size ends in 8</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">rcm_command_buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mh">0x302A8u</span>
+<span class="w">              </span><span class="o">||</span><span class="w"> </span><span class="n">rcm_command_buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mh">0x400u</span>
+<span class="w">              </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">rcm_command_buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xF</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ERROR_INVALID_SIZE</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w">  </span><span class="p">{</span>
+<span class="w">        </span><span class="n">left_to_rx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="p">((</span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">rcm_command_buffer</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="cm">/* copy any data _past_ the command into a separate payload</span>
+<span class="cm">     buffer at 0x40010000 */</span>
+<span class="w">  </span><span class="cm">/* -code omitted for brevity - */</span>
+
+<span class="w">  </span><span class="c1">// Wait for the DMA transaction to complete.</span>
+<span class="w">  </span><span class="c1">// [This is, again, simplified to convey concepts.]</span>
+<span class="w">  </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">usb_ops</span><span class="o">-&gt;</span><span class="n">bulk_read_complete</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// While we&#39;re blocking, it&#39;s still important that we respond to standard</span>
+<span class="w">    </span><span class="c1">// USB packets on the control endpoint, so do that here.</span>
+<span class="w">    </span><span class="n">usb_ops</span><span class="o">-&gt;</span><span class="n">handle_control_requests</span><span class="p">(</span><span class="n">next_buffer</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Astute readers will notice an issue unrelated to the Fusée Gelée exploit: this code fails to properly ensure DMA buffers are being used exclusively for a single operation. This results in an interesting race condition in which a DMA buffer can be simultaneously used to handle a control request and a RCM bulk transfer. This can break the flow of RCM, but as both operations contain untrusted data, this issue poses no security risk.</p>
+<p>To find the actual vulnerability, we must delve deeper, into the code that handles standard USB control requests. The core of this code is responsible for responding to USB control requests. A <em>control request</em> is initiated when the host sends a setup packet, of the following form:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: center;">&nbsp; &nbsp; &nbsp; &nbsp; Size  &nbsp; &nbsp;</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>direction</td>
+<td style="text-align: center;">1b</td>
+<td>if '1', the device should respond with data</td>
+</tr>
+<tr>
+<td>type</td>
+<td style="text-align: center;">2b</td>
+<td>specifies whether this request is of a standard type or not</td>
+</tr>
+<tr>
+<td>recipient</td>
+<td style="text-align: center;">5b</td>
+<td>encodes the context in which this request should be considered; <br /> for example, is this about a <code>DEVICE</code> or about an <code>ENDPOINT</code>?</td>
+</tr>
+<tr>
+<td>request</td>
+<td style="text-align: center;">8b</td>
+<td>specifies the request number</td>
+</tr>
+<tr>
+<td>value</td>
+<td style="text-align: center;">16b</td>
+<td>argument to the request</td>
+</tr>
+<tr>
+<td>index</td>
+<td style="text-align: center;">16b</td>
+<td>argument to the request</td>
+</tr>
+<tr>
+<td>length</td>
+<td style="text-align: center;">16b</td>
+<td>specifies the maximum amount of data to be transferred</td>
+</tr>
+</tbody>
+</table>
+<p>As an example, the host can request the status of a device by issuing a <code>GET_STATUS</code> request, at which point the device would be expected to respond with a short setup packet. Of particular note is the <code>length</code> field of the request, which should <em>limit</em> -- but not exclusively determine-- the <em>maximum</em> amount of data that should be included in the response. Per the specification, the device should respond with either the <em>amount of data specified</em> or the <em>amount of data available</em>, whichever is less.</p>
+<p>The bootloader's implementation of this behavior is conceptually implemented as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Temporary, automatic variables, located on the stack.</span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">status</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">data_to_tx</span><span class="p">;</span>
+
+<span class="c1">// The amount of data available to transmit.</span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">size_to_tx</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w"> </span><span class="c1">// The amount of data the USB host requested.</span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">length_read</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">setup_packet</span><span class="p">.</span><span class="n">length</span><span class="p">;</span>
+
+<span class="cm">/* Lots of handler cases have omitted for brevity. */</span>
+
+<span class="c1">// Handle GET_STATUS requests.</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">setup_packet</span><span class="p">.</span><span class="n">request</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">REQUEST_GET_STATUS</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">// If this is asking for the DEVICE&#39;s status, respond accordingly.</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">setup_packet</span><span class="p">.</span><span class="n">recipient</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">RECIPIENT_DEVICE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">status</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">get_usb_device_status</span><span class="p">();</span>
+<span class="w">      </span><span class="n">size_to_tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">status</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// Otherwise, respond with the ENDPOINT status.</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">setup_packet</span><span class="p">.</span><span class="n">recipient</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">RECIPIENT_ENDPOINT</span><span class="p">){</span>
+<span class="w">      </span><span class="n">status</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">get_usb_endpoint_status</span><span class="p">(</span><span class="n">setup_packet</span><span class="p">.</span><span class="n">index</span><span class="p">);</span>
+<span class="w">      </span><span class="n">size_to_tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length_read</span><span class="p">;</span><span class="w"> </span><span class="c1">// &lt;-- This is a critical error!</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/* ... */</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Send the status value, which we&#39;ll copy from the stack variable &#39;status&#39;.</span>
+<span class="w">  </span><span class="n">data_to_tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">status</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Copy the data we have into our DMA buffer for transmission.</span>
+<span class="c1">// For a GET_STATUS request, this copies data from the stack into our DMA buffer.</span>
+<span class="n">memcpy</span><span class="p">(</span><span class="n">dma_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">data_to_tx</span><span class="p">,</span><span class="w"> </span><span class="n">size_to_tx</span><span class="p">);</span>
+
+<span class="c1">// If the host requested less data than we have, only send the amount requested.</span>
+<span class="c1">// This effectively selects min(size_to_tx, length_read).</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">length_read</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">size_to_tx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">size_to_tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length_read</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Transmit the response we&#39;ve constructed back to the host.</span>
+<span class="n">respond_to_control_request</span><span class="p">(</span><span class="n">dma_buffer</span><span class="p">,</span><span class="w"> </span><span class="n">length_to_send</span><span class="p">);</span>
+</code></pre></div>
+<p>In most cases, the handler correctly limits the length of the transmitted responses to the amount it has available, per the USB specification. However, in a few notable cases, the length is <em>incorrectly always set to the amount requested</em> by the host:</p>
+<ul>
+<li>When issuing a <code>GET_CONFIGURATION</code> request with a <code>DEVICE</code> recipient.</li>
+<li>When issuing a <code>GET_INTERFACE</code> request with a <code>INTERFACE</code> recipient.</li>
+<li>When issuing a <code>GET_STATUS</code> request with a <code>ENDPOINT</code> recipient.</li>
+</ul>
+<p>This is a critical security error, as the host can request up to 65,535 bytes per control request. In cases where this is loaded directly into <code>size_to_tx</code>, this value directly sets the extent of the <code>memcpy</code> that follows-- and thus can copy up to 65,535 bytes into the currently selected <code>dma_buffer</code>. As the DMA buffers used for the USB stack are each comparatively short, this can result in a <em>very</em> significant buffer overflow.</p>
+<p>To validate that the vulnerability is present on a given device, one can try issuing an oversized request and watch as the device responds. Pictured below is the response generated when sending a oversized <code>GET_STATUS</code> control request with an <code>ENDPOINT</code> recipient to a T124:</p>
+<p><img alt="Reading a chunk of stack memory from a K1" src="https://github.com/nh-server/switch-guide/blob/master/docs/img/stack_read.png?raw=true" /></p>
+<p>A compliant device should generate a two-byte response to a <code>GET_STATUS</code> request-- but the affected Tegra responds with significantly longer response. This is a clear indication that we've run into the vulnerability described above.</p>
+<p>To really understand the impact of this vulnerability, it helps to understand the memory layout used by the bootROM. For our proof-of-concept, we'll consider the layout used by the T210 variant of the affected bootROM:</p>
+<p><img alt="Bootrom memory layout" src="https://github.com/nh-server/switch-guide/blob/master/docs/img/mem_layout.png?raw=true" /></p>
+<p>The major memory regions relevant to this vulnerability are as follows:</p>
+<ul>
+<li>The bootROM's <em>execution stack</em> grows downward from <code>0x40010000</code>; so the execution stack is located in the memory <em>immediately preceding</em> that address.</li>
+<li>The DMA buffers used for USB are located at <code>0x40005000</code> and <code>0x40009000</code>, respectively. Because the USB stack alternates between these two buffers once per USB transfer, the host effectively can control which DMA buffer is in use by sending USB transfers.</li>
+<li>Once the bootloader's RCM code receives a 680-byte command, it begins to store received data in a section of upper IRAM located at address <code>0x40010000</code>, and can store up to <code>0x30000</code> bytes of payload. This address is notable, as it is immediately past the end of the active execution stack.</li>
+</ul>
+<p>Of particular note is the adjacency of the bootROM's <em>execution stack</em> and the attacker-controlled <em>RCM payload</em>. Consider the behavior of the previous pseudo-code segment on receipt of a <code>GET_STATUS</code> request to the <code>ENDPOINT</code> with an excessive length. The resulting memcpy:</p>
+<ul>
+<li>copies <em>up to</em> 65,535 bytes total;</li>
+<li>sources data from a region <em>starting at the status variable on the stack</em> and extending significantly past the stack -- effectively copying mostly <em>from the attacker-controllable RCM payload buffer</em></li>
+<li>targets a buffer starting either <code>0x40005000</code> or <code>0x40009000</code>, at the attacker's discretion, reaching addresses of up to <code>0x40014fff</code> or <code>0x40018fff</code></li>
+</ul>
+<p>This is a powerful copy primitive, as it copies <em>from attacker controlled memory</em> and into a region that <em>includes the entire execution stack</em>:</p>
+<p><img alt="Effect of the vulnerability memcpy" src="https://raw.githubusercontent.com/nh-server/switch-guide/refs/heads/master/docs/img/copy_span.png" /></p>
+<p>This would be a powerful exploit on any platform; but this is a particularly devastating attack in the bootROM environment, which does not:</p>
+<ul>
+<li>Use common attack mitigations such as stack canaries, ostensibly to reduce complexity and save limited IRAM and IROM space.</li>
+<li>Apply memory protections, so the entire stack and all attacker controlled buffers can be read from, written to, and executed from.</li>
+<li>Employ typical 'application-processor' mitigation strategies such as ASLR.</li>
+</ul>
+<p>Accordingly, we now have:</p>
+<ol>
+<li>The capability to load arbitrary payloads into memory via RCM, as RCM only validates command signatures once payload receipt is complete.</li>
+<li>The ability to copy attacker-controlled values over the execution stack, overwriting return addresses and redirecting execution to a location of our choice.</li>
+</ol>
+<p>Together, these two abilities give us a full arbitrary-code execution exploit at a critical point in the Tegra's start-up process. As control flow is hijacked before return from <code>read_boot_images_via_usb_rcm</code>, none of the "lock-out" operations that precede normal startup are executed. This means, for example, that the T210 fuses-- and the keydata stored within them-- are accessible from the attack payload, and the bootROM is not yet protected.</p>
+<h3 id="exploit-execution">Exploit Execution</h3>
+<p>The Fusée Launcher PoC exploits the vulnerability described on the T210 via a careful sequence of interactions:</p>
+<ol>
+<li>The device is started in RCM mode. Device specifics will differ, but this is often via a key-combination held on startup.</li>
+<li>A host computer is allowed to enumerate the RCM device normally.</li>
+<li>The host reads the RCM device's ID by reading 16 bytes from the EP1 IN.</li>
+<li>The host builds an exploit payload, which is comprised of:<ol>
+<li>An RCM command that includes a maximum length, ensuring that we can send as much payload as possible without completing receipt of the RCM payload. Only the length of this command is used prior to validation; so we can submit an RCM command that starts with a maximum length of 0x30298, but which fills the remaining 676 bytes of the RCM command with any value.</li>
+<li>A set of values with which to overwrite the stack. As stack return address locations vary across the series, it's recommended that a large block composed of a single entry-point address be repeated a significant number of times, so one can effectively replace the entire stack with that address.</li>
+<li>The program to be executed ("final payload") is appended, ensuring that its position in the binary matches the entry-point from the previous step.</li>
+<li>The payload is padded to be evenly divisible by the 0x1000 block size to ensure the active block is not overwritten by the "DMA dual-use" bug described above.</li>
+</ol>
+</li>
+<li>The exploit payload is sent to the device over EP1 OUT, tracking the number of 0x1000-byte "blocks" that have been sent to the device. If this number is <em>even</em>, the next write will be issued to the lower DMA buffer (<code>0x40005000</code>); otherwise, it will be issued to the upper DMA buffer (<code>0x40009000</code>).</li>
+<li>If the next write would target the lower DMA buffer, issue another write of a full 0x1000 bytes to move the target to the upper DMA buffer, reducing the total amount of data to be copied.</li>
+<li>Trigger the vulnerable memcpy by sending a <code>GET_STATUS</code> <code>IN</code> control request with an <code>ENDPOINT</code> recipient, and a length long enough to smash the desired stack region, and preferably not longer than required.</li>
+</ol>
+<p>A simple host program that triggers this vulnerability is included with this report: see <code>fusee-launcher.py</code>. Note the restrictions on its function in the following section.</p>
+<hr />
+<h2 id="proof-of-concept">Proof of Concept</h2>
+<p>Included with this report is a set of three files:</p>
+<ul>
+<li><code>fusee-launcher.py</code> -- The main proof-of-concept accompanying this report. This python script is designed to launch a simple binary payload in the described bootROM context via the exploit.</li>
+<li><code>intermezzo.bin</code> -- This small stub is designed to relocate a payload from a higher load address to the standard RCM load address of <code>0x40010000</code>. This allows standard RCM payloads (such as <code>nvtboot-recover.bin</code>) to be executed.</li>
+<li><code>fusee.bin</code> -- An example payload for the Nintendo Switch, a representative and well-secured device based on a T210. This payload will print information from the device's fuses and protected IROM to the display, demonstrating that early bootROM execution has been achieved.</li>
+</ul>
+<p><strong>Support note:</strong> Many host-OS driver stacks are reluctant to issue unreasonably large control requests. Accordingly, the current proof-of-concept includes code designed to work in the following environments:</p>
+<ul>
+<li><strong>64-bit linux via <code>xhci_hcd</code></strong>. The proof-of-concept can manually submit large control requests, but does not work with the common <code>ehci_hcd</code> drivers due to driver limitations. A rough rule of thumb is that a connection via a blue / USB3 SuperSpeed port will almost always be handled by <code>xhci_hcd</code>.</li>
+<li><strong>macOS</strong>. The exploit works out of the box with no surprises or restrictions on modern macOS.</li>
+</ul>
+<p>Windows support would require addition of a custom kernel module, and thus was beyond the scope of a simple proof-of-concept.</p>
+<p>To use this proof-of-concept on a Nintendo Switch:</p>
+<ol>
+<li>Set up an Linux or macOS environment that meets the criteria above, and which has a working <code>python3</code> and <code>pyusb</code> as well as <code>libusb</code> installed.</li>
+<li>Connect the Switch to your host PC with a USB A -&gt; USB C cable.</li>
+<li>Boot the Switch in RCM mode. There are three ways to do this, but the first-- unseating its eMMC board-- is likely the most straightforward:<ol>
+<li>Ensure the Switch cannot boot off its eMMC. The most straightforward way to to this is to open the back cover and remove the socketed eMMC board; corrupting the BCT or bootloader on the eMMC boot partition would also work.</li>
+<li>Trigger the RCM straps. Hold VOL_UP and short pin 10 on the right JoyCon connector to ground while engaging the power button.</li>
+<li>Set bit 2 of PMC scratch register zero. On modern firmwares, this requires EL3 or pre-sleep BPMP execution.</li>
+</ol>
+</li>
+<li>Run the <code>fusee-launcher.py</code> with an argument of <code>fusee.bin</code>. (This requires <code>intermezzo.bin</code> to be located in the same folder as <code>fusee-launcher.py</code>.)<br />
+    <div class="highlight"><pre><span></span><code>sudo python3 ./fusee-launcher.py fusee.bin
+</code></pre></div></li>
+</ol>
+<p>If everything functions correctly, your Switch should be displaying a collection of fuse and protected-IROM information:</p>
+<p><img alt="exploit working" src="https://github.com/nh-server/switch-guide/blob/master/docs/img/switch_hax.jpg?raw=true" /></p>
+<h2 id="recommended-mitigations">Recommended Mitigations</h2>
+<p>In this case, the recommended mitigation is to correct the USB control request handler such that it always correctly constrains the length to be transmitted. This has to be handled according to the type of device:</p>
+<ul>
+<li><strong>For a device already in consumer hands</strong>, no solution is proposed. Unfortunately, access to the fuses needed to configure the device's ipatches was blocked when the ODM_PRODUCTION fuse was burned, so no bootROM update is possible. It is suggested that consumers be made aware of the situation so they can move to other devices, where possible.</li>
+<li><strong>For new devices</strong>, the correct solution is likely to introduce an new ipatch or new ipatches that limits the size of control request responses.</li>
+</ul>
+<p>It seems likely that OEMs producing T210-based devices may move to T214 solutions; it is the hope of the author that the T214's bootROM shares immunity with the T186. If not, patching the above is a recommended modification to the mask ROM and/or ipatches of the T214, as well.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../assets/mkdocs_pagetree_plugin.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

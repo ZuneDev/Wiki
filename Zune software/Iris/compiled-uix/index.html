@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="http://zunedev.github.io/Zune%20software/Iris/compiled-uix/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Compiled UIX v4 - ZuneDev Wiki</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../assets/mkdocs_pagetree_plugin.css" rel="stylesheet">
+        <link href="../../../style.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">ZuneDev Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Welcome</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Atlas</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Atlas/" class="dropdown-item">Atlas</a>
+</li>
+                                    
+<li>
+    <a href="../../../Atlas/File%20Types/" class="dropdown-item">File Types</a>
+</li>
+                                    
+<li>
+    <a href="../../../Atlas/Official%20Documentation/" class="dropdown-item">Official Documentation</a>
+</li>
+                                    
+<li>
+    <a href="../../../Atlas/Paths/" class="dropdown-item">Paths</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Zune devices</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Zune%20devices/Firmware%20Files/" class="dropdown-item">Firmware Files</a>
+</li>
+                                    
+<li>
+    <a href="../../../Zune%20devices/Gem%20Files/" class="dropdown-item">Gem Files</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/Activating%20Visual%20Studio%202008%20Profressional/" class="dropdown-item">Activating VS 2008 Professional</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/Keep%20WIFI%20Enabled/" class="dropdown-item">Keep WIFI Enabled</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/ZCP%20Files/" class="dropdown-item">ZCP Files</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">OpenZDK</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/OpenZDK/" class="dropdown-item">OpenZDK</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/OpenZDK/Liberate/" class="dropdown-item">Liberate</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/OpenZDK/Reference/" class="dropdown-item">Open ZDK Reference</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/OpenZDK/Setup/" class="dropdown-item">Setup</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Headers</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/OpenZDK/Headers/ZDKSystem_ShowSplashScreen/" class="dropdown-item">ZDKSystem_ShowSplashScreen(int flag)</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/OpenZDK/Headers/zdkaudio.h/" class="dropdown-item">zdkaudio.h</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/OpenZDK/Headers/zdkcontent.h/" class="dropdown-item">zdkcontent.h</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/OpenZDK/Headers/zdkdisplay.h/" class="dropdown-item">zdkdisplay.h</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/OpenZDK/Headers/zdkfont.h/" class="dropdown-item">zdkfont.h</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/OpenZDK/Headers/zdkimage.h/" class="dropdown-item">zdkimage.h</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/OpenZDK/Headers/zdkinput.h/" class="dropdown-item">zdkinput.h</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">XNA Framework</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/XNA%20Framework/" class="dropdown-item">XNA Framework</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Apps/XNA%20Framework/XNA%20Apps/" class="dropdown-item">XNA Apps</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Zune HD</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../Zune%20devices/Zune%20HD/" class="dropdown-item">Zune HD</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Zune%20HD/CE%206.0%20Architecture/" class="dropdown-item">CE 6.0 Architecture</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Zune%20HD/Device%20Manager/" class="dropdown-item">Device Manger</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Zune%20HD/Exploits/" class="dropdown-item">Exploits</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Zune%20HD/Fusee%20Gelee/" class="dropdown-item">Fusee Gelee</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Zune%20HD/OpenGL%20ES/" class="dropdown-item">OpenGL ES</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Zune%20HD/Partitions%20and%20Filesystems/" class="dropdown-item">Partitions and Filesystems</a>
+</li>
+            
+<li>
+    <a href="../../../Zune%20devices/Zune%20HD/Windows%20CE%206.0/" class="dropdown-item">Windows CE 6.0</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Zune software</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../" class="dropdown-item">Zune software</a>
+</li>
+                                    
+<li>
+    <a href="../../radio/" class="dropdown-item">Radio</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Iris</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Microsoft Iris</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Compiled UIX v4</a>
+</li>
+            
+<li>
+    <a href="../uix-assembly/" class="dropdown-item">UIX Assembly</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../uix-assembly/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/ZuneDev/Wiki/blob/main/docs/Zune software/Iris/compiled-uix.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#compiled-uix-v4" class="nav-link">Compiled UIX v4</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#data-format" class="nav-link">Data format</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#file-structure" class="nav-link">File structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#load-passes" class="nav-link">Load passes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#todo" class="nav-link">TODO</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="compiled-uix-v4">Compiled UIX v4</h1>
+<p>Compiled UIX (often shortened to "UIB" for "UI Binary") is one of two formats used by <a href="../">Iris 4</a> for defining user interfaces. UIB is generated by passing one or more UIX XML files to the UIX compiler, which pre-processes the UI definition into custom bytecode alongside a slew of data tables. Although UIB bytecode instructions are much higher level, the interpreter is conceptually similar to emulating a CPU in that they are relatively simple instructions which are interpreted in a fetch + decode + execute loop.</p>
+<p>Note that the format used by Iris 4 is significantly different than <a href="./compiled-uix-3.md">Iris 3's UIB</a>, which can be identified with the file magic <code>"UIX2008"</code>.</p>
+<p>Nearly all of the markup-related code is in the <a href="https://github.com/ZuneDev/MicrosoftIris/blob/master/UIX/Microsoft/Iris/Markup/"><code>Microsoft.Iris.Markup</code></a> namespace, including compiled UIX. Most of the functions responsible for loading compiled UIX files is in <a href="https://github.com/ZuneDev/MicrosoftIris/blob/master/UIX/Microsoft/Iris/Markup/CompiledMarkupLoader.cs"><code>Microsoft.Iris.Markup.CompiledMarkupLoader</code></a>, with some key functionality being delegated to other classes. Most notably, the bytecode interpreter is implemented in <a href="https://github.com/ZuneDev/MicrosoftIris/blob/master/UIX/Microsoft/Iris/Markup/Interpreter.cs"><code>Microsoft.Iris.Markup.Interpreter</code></a>.</p>
+<h2 id="data-format">Data format</h2>
+<p>Being a binary data format, UIB is capable of storing several primitive data types.</p>
+<p>All integers are stored in little endian, as is standard for Windows.</p>
+<h3 id="offsets">Offsets</h3>
+<p>All offsets are stored as unsigned 32-bit integers (<code>UInt32</code>), relative to the start of the file unless otherwise specified.</p>
+<p>Offset ranges are typically specified with an inclusive start offset and exclusive end offset: <span class="arithmatex">\([\mathrm{Start}, \mathrm{End})\)</span>.</p>
+<h3 id="strings">Strings</h3>
+<p>Strings are stored length-prefixed with a <code>UInt16</code> preamble, followed by encoded characters. If the preamble is <code>0xFFFF</code>, the string is null. Otherwise, the most significant bit indicates whether the characters are UTF-8 encoded, and the remaining 15 bits are the number of characters (not bytes) in the string.</p>
+<table>
+<thead>
+<tr>
+<th>Length value (binary)</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1111 1111 1111 1111</code></td>
+<td>Null string</td>
+</tr>
+<tr>
+<td><code>1xxx xxxx xxxx xxxx</code></td>
+<td>UTF-8 character encoding</td>
+</tr>
+<tr>
+<td><code>0xxx xxxx xxxx xxxx</code></td>
+<td>UTF-16 character encoding</td>
+</tr>
+</tbody>
+</table>
+<h3 id="string-references">String references</h3>
+<p>Most strings are not stored inline, but instead as <code>Int32</code> indexes into the <a href="#strings-table">Strings section</a> of the <a href="#binary-data-table">Binary Data Table</a>. This allows for common strings to be deduplicated, which can reduce file size.</p>
+<h3 id="string-arrays">String arrays</h3>
+<p>String arrays are lists of <a href="#string-references">string references</a>. This means that they are effectively <code>Int32</code> arrays, where each item is an index into the <a href="#strings-table">Strings list in the Binary Data Table</a>.</p>
+<h3 id="integer-arrays">Integer arrays</h3>
+<p>Arrays of 32-bit integers are also stored prefixed with their length, where, similarly to strings, a 'negative length' is interpreted as a null array. Otherwise, each integer is stored one after the other. Both signed and unsigned integers (<code>UInt32</code> and <code>Int32</code>) can be stored with in this format, but the Iris library always reads the values as unsigned, requiring callers to cast the value to <code>Int32</code> for signed integers.</p>
+<h3 id="booleans">Booleans</h3>
+<p>Boolean values are stored as a single byte, where <code>0</code> represents <code>false</code> and <code>1</code> represents <code>true</code>.</p>
+<h3 id="enums">Enums</h3>
+<p>Enums are usually stored as 32-bit integers. Naturally, the meaning of a particular integer value depends which enum it is intended to be.</p>
+<h4 id="markuptype"><code>MarkupType</code></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>None</code></td>
+<td><code>0x00000000</code></td>
+</tr>
+<tr>
+<td><code>UI</code></td>
+<td><code>0x01000000</code></td>
+</tr>
+<tr>
+<td><code>Class</code></td>
+<td><code>0x02000000</code></td>
+</tr>
+<tr>
+<td><code>Effect</code></td>
+<td><code>0x03000000</code></td>
+</tr>
+<tr>
+<td><code>DataType</code></td>
+<td><code>0x04000000</code></td>
+</tr>
+<tr>
+<td><code>DataQuery</code></td>
+<td><code>0x05000000</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="file-structure">File structure</h2>
+<p>A custom binary format is used to store all compiler output. This format is divided into several sections, and can even be split across multiple files using <a href="#shared-data-tables">shared Data Tables</a>.</p>
+<h3 id="header">Header</h3>
+<p>The first four bytes are always <code>0x5549421A</code>, which spell out <code>"UIB␚"</code> in ASCII. The next four bytes contain some representation of the UIB version, although the exact format is unknown. All known Iris 4 releases, including 4.0 and 4.8 Beta, use <code>1012</code> (<code>0x3F4</code>).</p>
+<h3 id="table-of-contents">Table of Contents</h3>
+<p>The Table of Contents begins at offset <code>0x0008</code>, with two <a href="#offsets">offsets</a> specifying the start and end of the <a href="#object-section">Object Section</a>. Locations <code>0x0010</code> and <code>0x0014</code> contain the start and end of the <a href="#line-number-table">Line Number Table</a>, respectively.</p>
+<p>The last item stored in the Table of Contents is a reference to the <a href="#binary-data-table">Binary Data Table</a>. This is composed of two fields, of which only one can be set at at time. The value at offset <code>0x0018</code> is the start of a <a href="#strings">string</a>. If the string is not null, then it is used as the resource URI to load a shared Data Table from. If it is null, then the <code>UInt32</code> at location <code>0x001A</code> is the offset to the Data Table embedded within the current file.</p>
+<h3 id="dependencies">Dependencies</h3>
+<p>The Dependencies section is a list of UIX files to include, encoded as the unsigned 16-bit count followed by a series of entries. Each include is composed of a flag that stores whether the referenced file is UIX XML, and the reference's compiler name <a href="#string-references">string</a>. This name is almost always the URI the file was loaded from.</p>
+<p>As an example, a Dependencies section with two includes might be stored as shown below. Note that all offsets are relative to the first byte of the dependency count.</p>
+<table>
+<thead>
+<tr>
+<th>Start offset</th>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x00</code></td>
+<td><code>0x02000000</code></td>
+<td>The list contains 2 includes</td>
+</tr>
+<tr>
+<td><code>0x04</code></td>
+<td><code>0x00000000</code></td>
+<td><code>dependencies[0]</code> is compiled UIB</td>
+</tr>
+<tr>
+<td><code>0x05</code></td>
+<td><code>0x05000000</code></td>
+<td>The URI of the 1st dependency is the 6th string in the <a href="#binary-data-table">Data Table</a></td>
+</tr>
+<tr>
+<td><code>0x09</code></td>
+<td><code>0x01</code></td>
+<td><code>dependencies[1]</code> is UIX XML</td>
+</tr>
+<tr>
+<td><code>0x10</code></td>
+<td><code>0x02000000</code></td>
+<td>The URI of the 2nd dependency is the 3rd string in the <a href="#binary-data-table">Data Table</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="type-export-declarations">Type Export Declarations</h3>
+<p>The Type Export Declarations are composed of two tables: the Export Table and Alias Table.</p>
+<p>The Export Table is a length-prefixed (<code>UInt16</code>) list of exports, where each export is a type defined with a <a href="#string-references">reference</a> to the local name and the <a href="#markuptype">markup type</a>.</p>
+<p>The Alias Table allows a UIB file to export imported types under a different name. Each entry is exactly 10 (<code>0x0A</code>) bytes long and is composed of the desired alias, the dependency to load it from, and the name of the target type. Both the alias and target type name are stored a <a href="#string-references">string references</a>. The dependency is always referred to using an index, either into the <a href="#type-import-table">Type Import Table</a> of the <a href="#binary-data-table">Shared Binary Data Table</a> if one is specified, or the file's <a href="#dependencies">dependencies</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Offset into entry</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x00</code></td>
+<td><a href="#string-references">String reference</a> to the desired Alias</td>
+</tr>
+<tr>
+<td><code>0x04</code></td>
+<td><code>UInt16</code> index into the <a href="#dependencies">Dependencies</a> list</td>
+</tr>
+<tr>
+<td><code>0x06</code></td>
+<td><a href="#string-references">String reference</a> to the target type name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="binary-data-table">Binary Data Table</h3>
+<p>The Binary Data Table consists of several subtables, with each one containing a different types of constant data. These subtables are stored in the following order:<br />
+1. Strings<br />
+1. ???</p>
+<h4 id="strings-table">Strings table</h4>
+<p>The Strings table is effectively a list of strings, though unlike the <a href="#string-arrays">primitive <code>string[]</code></a>, it is actually stored as <code>char[][]</code>.</p>
+<p>The first four bytes of the Strings table contain the length of the list as a 32-bit integer. Although this value cannot be negative, <code>UIX.dll</code> ultimately uses this as an <code>Int32</code> to allocate memory, so theoretically a maximum of <code>0x7FFFFFFF</code> or 2,147,483,647 strings can be stored in a single UIB file.</p>
+<p>Following the string count is a series of offsets relative to the first entry in the offset table (the byte immediately after the string count bytes). This is used similarly to a jump table, where the first chunk of the table is an array of fixed-size offsets into the second chunk. When UIB file is being read from fixed memory, this allows Iris to jump directly to the requested string using its index without having to read the entire table or every string before it.</p>
+<p>As an example, a string table with three entries might be stored as shown below. Note that all offsets are relative to first entry in the jump table.</p>
+<table>
+<thead>
+<tr>
+<th>Start offset</th>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-0x04</code></td>
+<td><code>0x03000000</code></td>
+<td>The table contains 3 strings</td>
+</tr>
+<tr>
+<td><code>0x00</code></td>
+<td><code>0x0C000000</code></td>
+<td><code>strings[0]</code> is located at offset <code>0x0C</code></td>
+</tr>
+<tr>
+<td><code>0x04</code></td>
+<td><code>0x1D000000</code></td>
+<td><code>strings[1]</code> is located at offset <code>0x1D</code></td>
+</tr>
+<tr>
+<td><code>0x08</code></td>
+<td><code>0x23000000</code></td>
+<td><code>strings[2]</code> is located at offset <code>0x23</code></td>
+</tr>
+<tr>
+<td><code>0x0C</code></td>
+<td><code>0x08000000</code></td>
+<td><code>strings[0]</code> is 8 UTF-16 characters</td>
+</tr>
+<tr>
+<td><code>0x0D</code></td>
+<td><code>"Γεια σας"</code></td>
+<td><code>strings[0]</code> character data</td>
+</tr>
+<tr>
+<td><code>0x1D</code></td>
+<td><code>0x05800000</code></td>
+<td><code>strings[1]</code> is 5 UTF-8 characters</td>
+</tr>
+<tr>
+<td><code>0x1E</code></td>
+<td><code>"Howdy"</code></td>
+<td><code>strings[1]</code> character data</td>
+</tr>
+<tr>
+<td><code>0x23</code></td>
+<td><code>0x08800000</code></td>
+<td><code>strings[2]</code> is 8 UTF-8 characters</td>
+</tr>
+<tr>
+<td><code>0x24</code></td>
+<td><code>"MOREtext"</code></td>
+<td><code>strings[2]</code> character data</td>
+</tr>
+</tbody>
+</table>
+<h4 id="constants-table">Constants Table</h4>
+<h4 id="type-import-table">Type Import Table</h4>
+<h4 id="source-markup-import-tables">Source Markup Import Tables</h4>
+<h3 id="line-number-table">Line Number Table</h3>
+<h3 id="object-section">Object Section</h3>
+<h3 id="export-table">Export Table</h3>
+<h2 id="load-passes">Load passes</h2>
+<p><em>[Work in progress]</em></p>
+<p>Compiled UIX is loaded in three main passes, listed in order of execution below. "Depersist" usually refers to reading and processing encoded information, such as type exports.</p>
+<ol>
+<li>Declare types<ol>
+<li>Depersist <a href="#table-of-contents">Table of Contents</a></li>
+<li>Depersist <a href="#binary-data-table">Binary Data Table</a></li>
+<li>Depersist <a href="#dependencies">Dependencies</a></li>
+<li>Depersist <a href="#type-export-declarations">Type Export Declarations</a></li>
+</ol>
+</li>
+<li>Populate public model<ol>
+<li>Depersist <a href="#type-import-table">Type Import Table</a></li>
+<li>Depersist Type Export Definition</li>
+</ol>
+</li>
+<li>Full<ol>
+<li>Depersist Data Mappings Table</li>
+<li>Depersist <a href="#constants-table">Constants Table</a></li>
+<li>Depersist <a href="#line-number-table">Line Number Table</a></li>
+<li>Depersist <a href="#object-section">Object Section</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="todo">TODO</h2>
+<blockquote>
+<p>Iris has two separate type systems-- the runtime types, which are your standard .NET types; and the markup type schemas, which of course are .NET types themselves, but are used to wrap runtime types for use by the UIX compiler and interpreter. Mapping from schema to runtime type and constructing instances from strings is easy enough, because those are both tasks the original UIX tooling has to do. Doing the reverse (finding the schema for a given runtime type, or encoding a runtime object into a string that can be parsed later) is much more difficult.</p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../assets/mkdocs_pagetree_plugin.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -8,7 +8,7 @@ Nearly all of the markup-related code is in the [`Microsoft.Iris.Markup`](https:
 ## Data format
 Being a binary data format, UIB is capable of storing several primitive data types.
 
-All integers are stored in little endian, as is standard for Windows.
+All integers are encoded in little endian, as is standard for Windows.
 
 ### Offsets
 All offsets are stored as unsigned 32-bit integers (`UInt32`), relative to the start of the file unless otherwise specified.
@@ -37,17 +37,17 @@ Arrays of 32-bit integers are also stored prefixed with their length, where, sim
 Boolean values are stored as a single byte, where `0` represents `false` and `1` represents `true`.
 
 ### Enums
-Enums are usually stored as 32-bit integers. Naturally, the meaning of a particular integer value depends which enum it is intended to be.
+Enums are usually encoded as 32-bit integers, with the meaning of each integer value depending on which enum type is being used.
 
 #### `MarkupType`
 Name        | Value
 ----------- | -------
 `None`      | `0x00000000`
-`UI`        | `0x01000000`
-`Class`     | `0x02000000`
-`Effect`    | `0x03000000`
-`DataType`  | `0x04000000`
-`DataQuery` | `0x05000000`
+`UI`        | `0x00000001`
+`Class`     | `0x00000002`
+`Effect`    | `0x00000003`
+`DataType`  | `0x00000004`
+`DataQuery` | `0x00000005`
 
 ## File structure
 A custom binary format is used to store all compiler output. This format is divided into several sections, and can even be split across multiple files using [shared Data Tables](#shared-data-tables).
@@ -74,11 +74,11 @@ As an example, a Dependencies section with two includes might be stored as shown
 
 Start offset          | Value         | Meaning
 --------------------- | ------------- | ---------
-`0x00`                | `0x02000000`  | The list contains 2 includes
-`0x04`                | `0x00000000`  | `dependencies[0]` is compiled UIB
-`0x05`                | `0x05000000`  | The URI of the 1st dependency is the 6th string in the [Data Table](#binary-data-table)
+`0x00`                | `0x00000002`  | The list contains 2 includes
+`0x04`                | `0x00`        | `dependencies[0]` is compiled UIB
+`0x05`                | `0x00000005`  | The URI of the 1st dependency is the 6th string in the [Data Table](#binary-data-table)
 `0x09`                | `0x01`        | `dependencies[1]` is UIX XML
-`0x10`                | `0x02000000` | The URI of the 2nd dependency is the 3rd string in the [Data Table](#binary-data-table)
+`0x10`                | `0x00000002`  | The URI of the 2nd dependency is the 3rd string in the [Data Table](#binary-data-table)
 
 ### Type Export Declarations
 The Type Export Declarations are composed of two tables: the Export Table and Alias Table.
@@ -109,15 +109,15 @@ As an example, a string table with three entries might be stored as shown below.
 
 Start offset   | Value        | Meaning
 -------------- | ------------ | -----------------------------------------
-`-0x04`        | `0x03000000` | The table contains 3 strings
-`0x00`         | `0x0C000000` | `strings[0]` is located at offset `0x0C`
-`0x04`         | `0x1D000000` | `strings[1]` is located at offset `0x1D`
-`0x08`         | `0x23000000` | `strings[2]` is located at offset `0x23`
-`0x0C`         | `0x08000000` | `strings[0]` is 8 UTF-16 characters
+`-0x04`        | `0x00000003` | The table contains 3 strings
+`0x00`         | `0x0000000C` | `strings[0]` is located at offset `0x0C`
+`0x04`         | `0x0000001D` | `strings[1]` is located at offset `0x1D`
+`0x08`         | `0x00000023` | `strings[2]` is located at offset `0x23`
+`0x0C`         | `0x00000008` | `strings[0]` is 8 UTF-16 characters
 `0x0D`         | `"Γεια σας"` | `strings[0]` character data
-`0x1D`         | `0x05800000` | `strings[1]` is 5 UTF-8 characters
+`0x1D`         | `0x00008005` | `strings[1]` is 5 UTF-8 characters
 `0x1E`         | `"Howdy"`    | `strings[1]` character data
-`0x23`         | `0x08800000` | `strings[2]` is 8 UTF-8 characters
+`0x23`         | `0x00008008` | `strings[2]` is 8 UTF-8 characters
 `0x24`         | `"MOREtext"` | `strings[2]` character data
 
 #### Constants Table

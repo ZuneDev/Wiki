@@ -53,7 +53,14 @@ Name        | Value
 A custom binary format is used to store all compiler output. This format is divided into several sections, and can even be split across multiple files using [shared Data Tables](#shared-data-tables).
 
 ### Header
-The first four bytes are always `0x5549421A`, which spell out `"UIB␚"` in ASCII. The next four bytes contain some representation of the UIB version, although the exact format is unknown. All known Iris 4 releases, including 4.0 and 4.8 Beta, use `1012` (`0x3F4`).
+The first four bytes are always `0x55 0x49 0x42 0x1A`, which spell out `"UIB␚"` in ASCII. The next four bytes contain the UIB revision number. Below are the known Iris 4 revisions:
+
+Revision           | Platform                     | Dependents
+------------------ | ---------------------------- | ------------
+1012 (`0x03F4`)    | Windows desktop              | Zune desktop 4.x (including 4.0 and 4.8 Beta)
+1133 (`0x046D`)    | Windpws Phone 7, build 7004  | Native in-box apps
+1169 (`0x0491`)    | Windows Phone 7, build ??    | Native in-box apps
+1292 (`0x050C`)    | Windows 10 Mobile            | Start menu and some other OS features
 
 ### Table of Contents
 The Table of Contents begins at offset `0x0008`, with two [offsets](#offsets) specifying the start and end of the [Object Section](#object-section). Locations `0x0010` and `0x0014` contain the start and end of the [Line Number Table](#line-number-table), respectively.
